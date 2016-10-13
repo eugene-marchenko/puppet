@@ -44,10 +44,10 @@ class apt(
     }
   }
 
-  # $root           = $apt::params::root
-  # $apt_conf_d     = $apt::params::apt_conf_d
-  # $sources_list_d = $apt::params::sources_list_d
-  # $provider       = $apt::params::provider
+  $root           = $apt::params::root
+  $apt_conf_d     = $apt::params::apt_conf_d
+  $sources_list_d = $apt::params::sources_list_d
+  $provider       = $apt::params::provider
 
   file { 'sources.list':
     ensure  => present,
