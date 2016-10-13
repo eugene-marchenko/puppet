@@ -2,434 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/REVISION" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/catalog/policy.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_testing.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_unstable.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_force.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_init.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_params.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_pin.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_ppa.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_release.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_source.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/backports.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/builddep.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/conf.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/debian/testing.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/debian/unstable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/force.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/key.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/pin.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/release.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/source.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/update.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/backports_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/debian_testing_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/debian_unstable_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/params_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/release_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/builddep_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/conf_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/force_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/key_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/pin_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/ppa_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/source_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/fixtures/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/source.list.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/builddep.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/debian/testing.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/debian/unstable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/force.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/key.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/pin.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/release.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/source.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/hiera.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/augeas.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/mailalias.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/support/helpers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/support/hiera/common.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/support/matchers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/files/concatfragments.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/files/null/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/lib/facter/concat_basedir.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/fragment.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/setup.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/hiera.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_config.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_init.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_package.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_service.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/augeas.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/mailalias.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/helpers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/hiera/common.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/matchers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/config.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/package.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/service.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcp_prepend.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/hiera.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/modules/motd_init.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/modules/motd_register.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/augeas.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/mailalias.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/helpers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/hiera/common.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/matchers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/register.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/Ubuntu/motd.tail.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/test.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/hiera.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_appproxy.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_backports.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_base.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_buildserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cq5_author.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cq5_author_secure.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cq5_author_secure_cache.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cq5_jvm.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cq5_publish.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_analytics.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_digital.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_github.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_mysql_backups.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_secgrp_check.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_secgrp_export.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cron_snapshotter.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_cronserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_debbuilder.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_dispatcher.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_ftpserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_grapher.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_jenkins.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_jmeternode.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_logserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_logserver_jenkins.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_logserver_varnish.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_mailrelay.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_misc_mounts.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_misc_vhosts.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_pvault.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_qaproxy.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_remotelog.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_rootdomain.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_solr_core_author.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_solr_core_publish.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_solrserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_stompserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_swap.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_users_contractors.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_users_developers.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_varnishserver.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/modules/roles_varnishserver_remotelog.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/augeas.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/mailalias.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/support/helpers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/support/hiera/common.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/support/matchers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/appproxy.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/backports.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/base.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/buildserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cq5/author.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cq5/author/secure.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cq5/author/secure_cache.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cq5/jvm.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cq5/publish.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/analytics.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/digital.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/github.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/mysql/backups.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/secgrp/check.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/secgrp/export.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cron/snapshot/rotator.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/cronserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/debbuilder.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/dispatcher.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/ftpserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/base.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/conf.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/config.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/indexer.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/initscript.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/javainitscript.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/logstash_config.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/package.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/redis.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/shipper.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/user.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/grapher/web.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/jenkins.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/jmeternode.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/logserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/logserver/jenkins.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/logserver/varnish.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/mailrelay.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/misc/mounts.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/misc/vhosts.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/packages.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/pvault.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/qaproxy.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/remotelog.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/rootdomain.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/solr/core/author.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/solr/core/publish.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/solrserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/stompserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/swap.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/users/contractors.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/users/developers.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/varnishserver.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/manifests/varnishserver/remotelog.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/roles/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/RELEASE_PROCESS.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/REVISION" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/facter/facter_dot_d.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/abs.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/basename.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/bool2num.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/capitalize.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chomp.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chop.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/curl.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/delete.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/delete_at.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/dirname.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/downcase.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/empty.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/flatten.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/getvar.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/grep.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/has_key.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hash.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hiera.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hiera_array.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hiera_hash.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hiera_include.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_array.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_domain_name.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_float.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_hash.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_integer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_ip_address.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_mac_address.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_string.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/join.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/keys.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/loadyaml.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/lstrip.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/member.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/merge.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/num2bool.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parsejson.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parseyaml.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/prefix.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/range.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/reverse.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/rstrip.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/shuffle.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/size.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/sort.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/squeeze.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/str2bool.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/strftime.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/strip.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/swapcase.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/time.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/type.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/unique.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/upcase.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_array.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_bool.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_hash.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_re.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_string.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_xml.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/values.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/values_at.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/zip.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/provider/file_line/ruby.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/anchor.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/file_line.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/manifests/stages.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/lib/puppet_spec/files.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/lib/puppet_spec/fixtures.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/lib/puppet_spec/matchers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/lib/puppet_spec/verbose.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/alias_should_to_must.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/publicize_methods.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/spec.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/facter/root_home_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/abs_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/bool2num_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/capitalize_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/chomp_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/chop_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/delete_at_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/delete_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/downcase_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/empty_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/flatten_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/getvar_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/grep_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/has_key_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/hash_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_array_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_domain_name_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_float_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_hash_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_integer_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_ip_address_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_mac_address_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_numeric_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/is_string_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/join_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/keys_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/lstrip_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/member_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/merge_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/num2bool_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/parsejson_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/parseyaml_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/prefix_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/range_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/reverse_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/rstrip_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/shuffle_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/size_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/sort_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/squeeze_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/str2bool_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/strftime_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/strip_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/swapcase_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/time_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/type_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/unique_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/upcase_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/validate_array_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/validate_bool_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/validate_hash_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/validate_string_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/values_at_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/values_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/parser/functions/zip_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/provider/file_line/ruby_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/anchor_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/file_line_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/spec/watchr.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/tests/file_line.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/stdlib/tests/init.pp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifests/site.pp" afterPath="$PROJECT_DIR$/manifests/site.pp" />
     </list>
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -451,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="site.pp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="site.pp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manifests/site.pp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -461,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apt_updates.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apt_updates.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/apt/lib/facter/apt_updates.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -581,32 +154,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="facter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -765,7 +312,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="4678000" />
+      <workItem from="1476359448257" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -785,7 +332,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4678000" />
+    <option name="totallyTimeSpent" value="4733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="373" y="52" width="1342" height="1028" extended-state="4" />
@@ -878,14 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifests/site.pp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/roles/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -946,6 +485,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifests/site.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
