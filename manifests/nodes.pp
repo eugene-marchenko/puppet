@@ -1,5 +1,3 @@
 node default {
-  package { 'httpd':
-    ensure => 'installed'
-  }
+  notify { "test message is: ${::fqdn}" :}
 }
