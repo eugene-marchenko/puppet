@@ -36,7 +36,7 @@ class roles::base() {
     fail('aws_snapshotter_secret_key fact not set')
   }
 
-  include dhcp
+  # include dhcp
   # include lvm2
   # include hosts
   include roles::packages
