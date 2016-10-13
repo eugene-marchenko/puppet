@@ -1,5 +1,5 @@
-node 'default'
+node 'default' {
  file { '/tmp/hello':
- content => "Hello, world\n",
+  content => "Hello, world\n",
  }
 }
