@@ -1,3 +1,5 @@
-package { 'curl':
-  ensure => installed,
+node default {
+  package { 'httpd':
+    ensure => 'installed'
+  }
 }
