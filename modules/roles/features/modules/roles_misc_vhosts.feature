@@ -1,0 +1,50 @@
+Feature: roles/misc/vhosts.pp
+  In order to setup a server with various miscellaneous virtual hosts, this role
+  must create the necessary virtualhost resources and any required resources
+  for those vhosts to run.
+
+    Scenario: roles::misc::vhosts
+    Given a node named "class-roles-misc-vhosts"
+    When I try to compile the catalog
+    Then compilation should succeed
+    And all resource dependencies should resolve
+    And there should be a resource "Class[roles::misc::mounts]"
+    And there should be a resource "Mount[/opt]"
+    And there should be a resource "Class[php]"
+    And there should be a resource "Package[php5-mysql]"
+    And there should be a resource "Class[apache]"
+    And there should be a resource "Class[apache::mod::php]"
+    And there should be a resource "Class[apache::ssl]"
+    And there should be a resource "A2mod[speling]"
+    And there should be a resource "A2mod[rewrite]"
+    And there should be a resource "A2mod[proxy_http]"
+    And there should be a resource "A2mod[headers]"
+    And there should be a resource "A2site[08-waiver.ec2.newsweek.com]"
+    And there should be a resource "A2site[08-origin-ndn.newsweek.com]"
+    And there should be a resource "A2site[08-greenrankings-origin.newsweek.com]"
+    And there should be a resource "A2site[08-harman.newsweek.com]"
+    And there should be a resource "A2site[08-utilities.newsweek.com]"
+    And there should be a resource "A2site[08-research.ec2.newsweek.com]"
+    And there should be a resource "A2site[08-newsweekhr.newsweek.com_80]"
+    And there should be a resource "A2site[08-origin-podcasts.newsweek.com]"
+    And there should be a resource "A2site[08-cdn-img-origin.ec2.newsweek.com]"
+    And there should be a resource "A2site[08-highschools.newsweek.com]"
+    And there should be a resource "A2site[08-newsweekhr.newsweek.com_443]"
+    And there should be a resource "A2site[08-volvos80-origin.newsweek.com]"
+    And there should be a resource "A2site[08-www.newsweekmediakit.com]"
+    And there should be a resource "A2site[demo.thedailybeast.com]"
+    And there should be a file "/etc/apache2/sites-available/08-greenrankings-origin.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-waiver.ec2.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-utilities.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-harman.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-volvos80-origin.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-cdn-img-origin.ec2.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-origin-ndn.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-origin-podcasts.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-research.ec2.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-newsweekhr.newsweek.com_80"
+    And there should be a file "/etc/apache2/sites-available/08-www.newsweekmediakit.com"
+    And there should be a file "/etc/apache2/sites-available/08-highschools.newsweek.com"
+    And there should be a file "/etc/apache2/sites-available/08-newsweekhr.newsweek.com_443"
+    And there should be a resource "File[/etc/apache2/password.file]"
+    And there should be a file "/etc/apache2/sites-available/demo.thedailybeast.com"
