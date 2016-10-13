@@ -37,7 +37,7 @@ class roles::base() {
   }
 
   # include dhcp
-  # include lvm2
+  include lvm
   # include hosts
   include roles::packages
   # hosts::manage { 'meta-data' : ip => '169.254.169.254' }
@@ -94,7 +94,7 @@ class roles::base() {
 
   anchor{'roles::base::begin':}
   # -> Class[dhcp]
-  # -> Class[lvm2]
+  -> Class[lvm]
   # -> Class[hosts]
   # -> Hosts::Manage['meta-data']
   # -> Class[ntp]
