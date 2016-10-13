@@ -1,16 +1,34 @@
-# basename(string) : string
-# basename(string[]) : string[]
-#
-# Returns the last component of the filename given as argument, which must be
-# formed using forward slashes (``/..) regardless of the separator used on the
-# local file system.
 module Puppet::Parser::Functions
-	newfunction(:basename, :type => :rvalue) do |args|
-		if args[0].is_a?(Array)
-			args.collect do |a| File.basename(a) end
-		else
-			File.basename(args[0])
-		end
-	end
+  newfunction(:basename, :type => :rvalue, :doc => <<-EOS
+    Strips directory (and optional suffix) from a filename
+    EOS
+  ) do |arguments|
+
+    if arguments.size < 1 then
+      raise(Puppet::ParseError, "basename(): No arguments given")
+    elsif arguments.size > 2 then
+      raise(Puppet::ParseError, "basename(): Too many arguments given (#{arguments.size})")
+    else
+
+      unless arguments[0].is_a?(String)
+        raise(Puppet::ParseError, 'basename(): Requires string as first argument')
+      end
+
+      if arguments.size == 1 then
+        rv = File.basename(arguments[0])
+      elsif arguments.size == 2 then
+
+        unless arguments[1].is_a?(String)
+          raise(Puppet::ParseError, 'basename(): Requires string as second argument')
+        end
+
+        rv = File.basename(arguments[0], arguments[1])
+      end
+
+    end
+
+    return rv
+  end
 end
 
+# vim: set ts=2 sw=2 et :

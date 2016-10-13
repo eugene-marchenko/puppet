@@ -8,6 +8,8 @@ Returns true if the variable passed to this function is a float.
     EOS
   ) do |arguments|
 
+    function_deprecation([:puppet_3_type_check, 'This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Float. There is further documentation for validate_legacy function in the README.'])
+
     if (arguments.size != 1) then
       raise(Puppet::ParseError, "is_float(): Wrong number of arguments "+
         "given #{arguments.size} for 1")
@@ -15,7 +17,10 @@ Returns true if the variable passed to this function is a float.
 
     value = arguments[0]
 
-    if value != value.to_f.to_s then
+    # Only allow Numeric or String types
+    return false unless value.is_a?(Numeric) or value.is_a?(String)
+
+    if value != value.to_f.to_s and !value.is_a? Float then
       return false
     else
       return true
