@@ -1,147 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/CHANGELOG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/Modulefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/REVISION" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/catalog/policy.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_debian_testing.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_debian_unstable.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_force.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_init.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_params.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_pin.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_ppa.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_release.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/modules/apt/apt_source.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/puppet.conf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/cron.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/exec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/file.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/package.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/puppet.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/service.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/steps/user.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/support/hooks.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/features/support/world.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/backports.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/builddep.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/conf.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/debian/testing.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/debian/unstable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/force.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/key.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/pin.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/release.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/source.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/manifests/update.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/apt_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/backports_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/debian_testing_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/debian_unstable_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/params_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/classes/release_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/builddep_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/conf_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/force_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/key_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/pin_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/ppa_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/defines/source_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/fixtures/manifests/site.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/templates/source.list.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/builddep.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/debian/testing.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/debian/unstable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/force.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/key.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/pin.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/release.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apt/tests/source.pp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/CHANGELOG" afterPath="$PROJECT_DIR$/modules/apt/CHANGELOG" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/LICENSE" afterPath="$PROJECT_DIR$/modules/apt/LICENSE" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/Modulefile" afterPath="$PROJECT_DIR$/modules/apt/Modulefile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/README.md" afterPath="$PROJECT_DIR$/modules/apt/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/REVISION" afterPath="$PROJECT_DIR$/modules/apt/REVISION" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/Rakefile" afterPath="$PROJECT_DIR$/modules/apt/Rakefile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/catalog/policy.feature" afterPath="$PROJECT_DIR$/modules/apt/features/catalog/policy.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/manifests/site.pp" afterPath="$PROJECT_DIR$/modules/apt/features/manifests/site.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_debian_testing.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_testing.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_debian_unstable.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_unstable.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_force.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_force.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_init.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_init.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_params.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_params.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_pin.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_pin.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_ppa.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_ppa.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_release.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_release.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/modules/apt/apt_source.feature" afterPath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_source.feature" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/puppet.conf" afterPath="$PROJECT_DIR$/modules/apt/features/puppet.conf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/cron.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/cron.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/exec.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/exec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/file.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/file.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/package.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/package.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/puppet.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/puppet.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/service.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/service.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/steps/user.rb" afterPath="$PROJECT_DIR$/modules/apt/features/steps/user.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/support/hooks.rb" afterPath="$PROJECT_DIR$/modules/apt/features/support/hooks.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/features/support/world.rb" afterPath="$PROJECT_DIR$/modules/apt/features/support/world.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/backports.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/backports.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/builddep.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/builddep.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/conf.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/conf.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/debian/testing.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/debian/testing.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/debian/unstable.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/debian/unstable.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/force.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/force.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/init.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/init.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/key.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/key.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/params.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/params.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/pin.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/pin.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/ppa.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/ppa.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/release.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/release.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/source.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/source.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/manifests/update.pp" afterPath="$PROJECT_DIR$/modules/apt/manifests/update.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/metadata.json" afterPath="$PROJECT_DIR$/modules/apt/metadata.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/apt_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/backports_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/backports_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/debian_testing_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/debian_testing_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/debian_unstable_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/debian_unstable_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/params_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/params_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/classes/release_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/classes/release_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/builddep_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/builddep_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/conf_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/conf_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/force_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/force_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/key_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/key_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/pin_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/pin_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/ppa_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/ppa_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/defines/source_spec.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/defines/source_spec.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/fixtures/manifests/site.pp" afterPath="$PROJECT_DIR$/modules/apt/spec/fixtures/manifests/site.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/modules/apt/spec/spec_helper.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/templates/source.list.erb" afterPath="$PROJECT_DIR$/modules/apt/templates/source.list.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/builddep.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/builddep.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/debian/testing.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/debian/testing.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/debian/unstable.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/debian/unstable.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/force.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/force.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/init.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/init.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/key.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/key.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/params.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/params.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/pin.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/pin.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/ppa.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/ppa.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/release.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/release.pp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dist/apt/tests/source.pp" afterPath="$PROJECT_DIR$/modules/apt/tests/source.pp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="" />
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -172,11 +32,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.pp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="site.pp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifests/site.pp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.pp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/apt/manifests/init.pp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="root_home.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -263,6 +143,72 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stdlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stdlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stdlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -295,6 +241,7 @@
       <recent name="$PROJECT_DIR$/dist" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -415,7 +362,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="2024000" />
+      <workItem from="1476359448257" duration="2402000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -435,13 +382,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2024000" />
+    <option name="totallyTimeSpent" value="2402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="373" y="52" width="1342" height="1028" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25465837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25465837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -500,6 +447,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/apt/manifests/init.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
