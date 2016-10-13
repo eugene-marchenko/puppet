@@ -8,7 +8,7 @@ filebucket { 'server': server => 'puppet.ec2.newsweek.com' }
 Package { require => Class[apt::update] }
 
 node default {
-  include dist/apt
+  include apt
   include roles::base
 
   $roles = split($::roles, '\s*,\s*')
