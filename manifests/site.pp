@@ -1,1 +1,3 @@
-import 'nodes.pp'
+package { 'curl':
+  ensure => installed,
+}
