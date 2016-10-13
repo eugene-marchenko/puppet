@@ -93,7 +93,7 @@ class roles::base() {
   # }
 
   anchor{'roles::base::begin':}
-  -> Class[dhcp]
+  # -> Class[dhcp]
   # -> Class[lvm2]
   # -> Class[hosts]
   # -> Hosts::Manage['meta-data']
