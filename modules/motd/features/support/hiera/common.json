@@ -1,0 +1,18 @@
+{ "motd_custom_service" : { 
+    "motd" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "motd_custom_packages" : {
+    "motd" : {}
+  },
+  "motd_custom_configs" : {
+    "/etc/motd/motd.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}
