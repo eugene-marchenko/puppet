@@ -9,7 +9,7 @@ Package { require => Class[apt::update] }
 
 node default {
   include apt
-  include roles::base
+  # include roles::base
 
   $roles = split($::roles, '\s*,\s*')
 
