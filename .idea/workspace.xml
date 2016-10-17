@@ -2,75 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/LICENSE" afterPath="$PROJECT_DIR$/modules/stdlib/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/README.markdown" afterPath="$PROJECT_DIR$/modules/stdlib/README.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/RELEASE_PROCESS.markdown" afterPath="$PROJECT_DIR$/modules/stdlib/RELEASE_PROCESS.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/Rakefile" afterPath="$PROJECT_DIR$/modules/stdlib/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/facter/facter_dot_d.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/facter/facter_dot_d.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/abs.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/abs.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/basename.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/basename.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/bool2num.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/bool2num.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/capitalize.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/capitalize.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chomp.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chomp.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chop.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/chop.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/delete.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/delete.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/dirname.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/dirname.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/downcase.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/downcase.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/empty.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/empty.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/flatten.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/flatten.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/getvar.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/getvar.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hash.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/hash.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_array.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_array.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_domain_name.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_domain_name.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_float.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_float.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_integer.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_integer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_ip_address.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_ip_address.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_mac_address.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_mac_address.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_numeric.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_string.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/is_string.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/join.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/join.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/loadyaml.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/loadyaml.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/lstrip.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/lstrip.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/member.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/member.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/merge.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/merge.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/num2bool.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/num2bool.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parsejson.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parsejson.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parseyaml.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/parseyaml.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/prefix.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/prefix.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/range.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/range.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/reverse.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/reverse.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/rstrip.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/rstrip.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/shuffle.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/shuffle.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/size.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/size.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/squeeze.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/squeeze.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/str2bool.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/str2bool.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/strip.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/strip.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/swapcase.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/swapcase.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/time.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/time.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/type.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/unique.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/unique.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/upcase.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/upcase.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_array.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_array.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_bool.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_bool.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_hash.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_hash.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_re.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_re.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_string.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/validate_string.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/values_at.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/values_at.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/zip.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/parser/functions/zip.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/provider/file_line/ruby.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/provider/file_line/ruby.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/anchor.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/anchor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/file_line.rb" afterPath="$PROJECT_DIR$/modules/stdlib/lib/puppet/type/file_line.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/manifests/init.pp" afterPath="$PROJECT_DIR$/modules/stdlib/manifests/init.pp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/manifests/stages.pp" afterPath="$PROJECT_DIR$/modules/stdlib/manifests/stages.pp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/metadata.json" afterPath="$PROJECT_DIR$/modules/stdlib/metadata.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/alias_should_to_must.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/alias_should_to_must.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/publicize_methods.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/monkey_patches/publicize_methods.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/facter/root_home_spec.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/unit/facter/root_home_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/provider/file_line/ruby_spec.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/provider/file_line/ruby_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/anchor_spec.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/anchor_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/file_line_spec.rb" afterPath="$PROJECT_DIR$/modules/stdlib/spec/unit/puppet/type/file_line_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/shells/templates/shells.erb" afterPath="$PROJECT_DIR$/modules/shells/templates/shells.erb" />
     </list>
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,17 +35,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shells.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shells.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/shells/templates/shells.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="272">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.pp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shells/manifests/init.pp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.pp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shells/manifests/config.pp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-180">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root_home.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="params.pp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shells/manifests/params.pp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="root_home.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -136,6 +99,8 @@
         <option value="$PROJECT_DIR$/hieradata/common.yaml" />
         <option value="$PROJECT_DIR$/modules/hosts/manifests/init.pp" />
         <option value="$PROJECT_DIR$/modules/roles/manifests/base.pp" />
+        <option value="$PROJECT_DIR$/modules/shells/manifests/init.pp" />
+        <option value="$PROJECT_DIR$/modules/shells/templates/shells.erb" />
       </list>
     </option>
   </component>
@@ -235,6 +200,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,7 +397,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="15166000" />
+      <workItem from="1476359448257" duration="16084000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -426,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476359795061</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1476716457891</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1476716457891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15166000" />
+    <option name="totallyTimeSpent" value="16084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="252" y="52" width="1461" height="1028" extended-state="4" />
@@ -475,30 +469,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manifests/nodes.pp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/apt/spec/classes/apt_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/dhcp/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/dhcp/manifests/service.pp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -867,7 +837,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/shells/templates/shells.erb">
+    <entry file="file://$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -875,10 +845,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/stdlib/lib/facter/root_home.rb">
+    <entry file="file://$PROJECT_DIR$/modules/shells/manifests/config.pp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-180">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shells/manifests/params.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shells/manifests/init.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shells/templates/shells.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>

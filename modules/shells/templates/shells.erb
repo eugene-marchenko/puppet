@@ -1,18 +1,18 @@
 # Managed by puppet <%= puppetversion %>
 # /etc/shells: valid login shells
-<% if scope.lookupvar('::shells_allowed') != :undefined -%>
-<% scope.lookupvar('::shells_allowed').split(',').each do |shells| -%>
-<%= shells %>
-<% end -%>
-<% elsif scope.lookupvar('shells_allowed') != :undefined -%>
-<% scope.lookupvar('shells_allowed').each do |shells| -%>
-<%= shells %>
-<% end -%>
-<% else -%>
-/bin/sh
-/bin/dash
-/bin/bash
-/bin/rbash
-/usr/bin/tmux
-/usr/bin/screen
-<% end -%>
+#<% if scope.lookupvar('::shells_allowed') != :undefined -%>
+#<% scope.lookupvar('::shells_allowed').split(',').each do |shells| -%>
+#<%= shells %>
+#<% end -%>
+#<% elsif scope.lookupvar('shells_allowed') != :undefined -%>
+#<% scope.lookupvar('shells_allowed').each do |shells| -%>
+#<%= shells %>
+#<% end -%>
+#<% else -%>
+#/bin/sh
+#/bin/dash
+#/bin/bash
+#/bin/rbash
+#/usr/bin/tmux
+#/usr/bin/screen
+#<% end -%>
