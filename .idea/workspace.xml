@@ -2,33 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/checksums.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/acceptance/motd_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/acceptance/nodesets/default.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/acceptance/nodesets/ubuntu.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/classes/motd_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/spec.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/spec/spec_helper_acceptance.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/motd.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/spec.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/config/redhat-6-64mda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/config/redhat-7-64mda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/config/ubuntu-1204-64mda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/config/ubuntu-1404-64mda" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/pre-suite/00_pe_install.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/pre-suite/01_motd_module_install.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/test_run_scripts/run_test_with_ankeny.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/beaker/tests/01_create_motd_content.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/tests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/backports.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/builddep.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/debian_testing.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/debian_unstable.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/disable_keys.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/fancy_progress.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/force.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/hold.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/key.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/pin.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/ppa.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/release.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/source.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/unattended_upgrades.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_reboot_required.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_update_last_success.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_updates.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet/provider/apt_key/apt_key.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet/type/apt_key.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet_x/apt_key/patch_openuri.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/backports.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/conf.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/key.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/pin.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/ppa.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/setting.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/source.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/update.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/apt_key_provider_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/apt_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/class_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/centos-7-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/debian-8-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/default.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/centos-7.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/debian-8.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/ubuntu-14.04.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_backports_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_update_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/params_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/conf_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/key_compat_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/key_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/pin_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/ppa_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/setting_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/source_compat_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/source_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec_helper_acceptance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_has_updates_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_package_updates_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_reboot_required_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_security_updates_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_update_last_success_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_updates_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/puppet/type/apt_key_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/15update-stamp.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/_conf_header.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/_header.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/conf.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/pin.pref.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/proxy.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/source.list.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/files/dhcpd.hosts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/files/dhcpd.pools" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/disable.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/failover.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/host.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/ignoredsubnet.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/monitor.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/pool.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/classes/dhcp_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/defines/host_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/defines/pool_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/lib/module_spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/debian/default_isc-dhcp-server" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf-extra.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf-header.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.ddns.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.failover.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.ntp.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.pxe.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.host.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.ignoredsubnet.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.pool.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/redhat/sysconfig-dhcpd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/tests/init.pp" afterPath="" />
     </list>
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +144,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/motd/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apt_spec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -85,16 +179,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
               <caret line="39" column="18" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/apt/manifests/init.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="69" column="15" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -416,6 +500,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="puppet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="manifests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -592,7 +724,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="13519000" />
+      <workItem from="1476359448257" duration="13635000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -612,7 +744,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13519000" />
+    <option name="totallyTimeSpent" value="13635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="328" y="52" width="1461" height="1028" extended-state="4" />
@@ -666,14 +798,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/apt/spec/classes/apt_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1050,6 +1174,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/motd/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

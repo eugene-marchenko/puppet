@@ -1,42 +1,66 @@
-# == Class: dhcp::params
+# = Class: dhcp::params
+#
+# This module manages default parameters. It does the heavy lifting
+# to determine operating system specific parameters.
+#
+# == Parameters:
+#
+# None.
+#
+# == Actions:
+#
+# None.
+#
+# == Requires:
+#
+# Nothing.
+#
+# == Sample Usage:
+#
+# class dhcp::someclass( packages = $dhcp::params::some_param
+# ) inherits dhcp::params {
+# ...do something
+# }
+#
+# class { 'dhcp::params' : }
+#
+# include dhcp::params
 #
 class dhcp::params {
 
-  case $::osfamily {
-    'debian': {
-      if ( $::operatingsystem == 'ubuntu' ) {
-        if (versioncmp($::operatingsystemrelease, '12.04') >= 0) {
-          $dhcp_dir    = '/etc/dhcp'
-        } else {
-          $dhcp_dir    = '/etc/dhcp3'
-        }
-      } else {
-        $dhcp_dir    = '/etc/dhcp'
-      }
-      $packagename      = 'isc-dhcp-server'
-      $servicename      = 'isc-dhcp-server'
-      $package_provider = undef
+$supportedversion = '2.7'
+$puppetversion = regsubst($::puppetversion, '^(\d+)\.(\d+)\.(\d+)$', '\1.\2')
+
+if (versioncmp($puppetversion,$supportedversion) < 0 ) {
+  fail("Module ${module_name} supports dhcp version >= ${supportedversion}")
+}
+
+case $::operatingsystem {
+  /Debian|Ubuntu/: {
+    $dhcp_package_defaults = {
+      'ensure'    => 'latest',
+      'provider'  => 'apt',
+      'tag'       => 'dhcp-package',
     }
-    'darwin': {
-      $dhcp_dir         = '/opt/local/etc/dhcp'
-      $packagename      = 'dhcp'
-      $servicename      = 'org.macports.dhcpd'
-      $package_provider = 'macports'
+    $dhcp_packages = {
+      'isc-dhcp-client'        => {},
     }
-    'freebsd': {
-      $dhcp_dir         = '/usr/local/etc'
-      $packagename      = 'net/isc-dhcp42-server'
-      $servicename      = 'isc-dhcpd'
-      $package_provider = undef
+    $dhcp_configs = {
+      '/etc/dhcp/dhclient.conf'  => {
+        'ensure'  => 'present',
+        'path'    => '/etc/dhcp/dhclient.conf',
+        'line'    => template('dhcp/dhcp_prepend.erb'),
+      },
     }
-    'redhat': {
-      $dhcp_dir         = '/etc/dhcp'
-      $packagename      = 'dhcp'
-      $servicename      = 'dhcpd'
-      $package_provider = undef
-    }
-    default: {
-      fail('dhcp is supported on the following OS\'s: Debian, Ubuntu, Darwin, FreeBSD, RedHat, Fedora, and CentOS.')
+    $dhcp_services = {
+      '/etc/init.d/networking restart'  => {
+        'logoutput'   => 'on_failure',
+        'refreshonly' => true,
+      },
     }
   }
+  default: {
+    fail("Module ${module_name} does not support ${::operatingsystem}")
+  }
+}
 }

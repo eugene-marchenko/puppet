@@ -1,171 +1,99 @@
-# == Class: apt
+# Class: apt
 #
-# Manage APT (Advanced Packaging Tool)
+# This module manages the initial configuration of apt.
 #
-class apt (
-  $confs    = {},
-  $update   = {},
-  $purge    = {},
-  $proxy    = {},
-  $sources  = {},
-  $keys     = {},
-  $ppas     = {},
-  $pins     = {},
-  $settings = {},
-) inherits ::apt::params {
+# Parameters:
+#   The parameters listed here are not required in general and were
+#     added for use cases related to development environments.
+#   disable_keys - disables the requirement for all packages to be signed
+#   always_apt_update - rather apt should be updated on every run (intended
+#     for development environments where package updates are frequent
+#   purge_sources_list - Accepts true or false. Defaults to false If set to
+#     true, Puppet will purge all unmanaged entries from sources.list"
+#   purge_sources_list_d - Accepts true or false. Defaults to false. If set
+#     to false, Puppet will purge all unmanaged entries from sources.list.d
+#
+# Actions:
+#
+# Requires:
+#
+# Sample Usage:
+#  class { 'apt': }
+class apt(
+  $always_apt_update = false,
+  $disable_keys = undef,
+  $proxy_host = false,
+  $proxy_port = '8080',
+  $purge_sources_list = false,
+  $purge_sources_list_d = false
+) {
 
-  $frequency_options = ['always','daily','weekly','reluctantly']
-  validate_hash($update)
-  if $update['frequency'] {
-    validate_re($update['frequency'], $frequency_options)
-  }
-  if $update['timeout'] {
-    unless is_integer($update['timeout']) {
-      fail('timeout value for update must be an integer')
-    }
-  }
-  if $update['tries'] {
-    unless is_integer($update['tries']) {
-      fail('tries value for update must be an integer')
-    }
-  }
+  include apt::params
+  include apt::update
 
-  $_update = merge($::apt::update_defaults, $update)
-  include ::apt::update
+  validate_bool($purge_sources_list, $purge_sources_list_d)
 
-  validate_hash($purge)
-  if $purge['sources.list'] {
-    validate_bool($purge['sources.list'])
-  }
-  if $purge['sources.list.d'] {
-    validate_bool($purge['sources.list.d'])
-  }
-  if $purge['preferences'] {
-    validate_bool($purge['preferences'])
-  }
-  if $purge['preferences.d'] {
-    validate_bool($purge['preferences.d'])
+  $sources_list_content = $purge_sources_list ? {
+    false => undef,
+    true  => "# Repos managed by puppet.\n",
   }
 
-  $_purge = merge($::apt::purge_defaults, $purge)
-
-  validate_hash($proxy)
-  if $proxy['ensure'] {
-    validate_re($proxy['ensure'], ['file', 'present', 'absent'])
-  }
-  if $proxy['host'] {
-    validate_string($proxy['host'])
-  }
-  if $proxy['port'] {
-    unless is_integer($proxy['port']) {
-      fail('$proxy port must be an integer')
-    }
-  }
-  if $proxy['https'] {
-    validate_bool($proxy['https'])
-  }
-
-  $_proxy = merge($apt::proxy_defaults, $proxy)
-
-  validate_hash($confs)
-  validate_hash($sources)
-  validate_hash($keys)
-  validate_hash($settings)
-  validate_hash($ppas)
-  validate_hash($pins)
-
-  if $_proxy['ensure'] == 'absent' or $_proxy['host'] {
-    apt::setting { 'conf-proxy':
-      ensure   => $_proxy['ensure'],
-      priority => '01',
-      content  => template('apt/_conf_header.erb', 'apt/proxy.erb'),
-    }
-  }
-
-  $sources_list_content = $_purge['sources.list'] ? {
-    true    => "# Repos managed by puppet.\n",
-    default => undef,
-  }
-
-  $preferences_ensure = $_purge['preferences'] ? {
-    true    => absent,
-    default => file,
-  }
-
-  if $_update['frequency'] == 'always' {
+  if $always_apt_update == true {
     Exec <| title=='apt_update' |> {
       refreshonly => false,
     }
   }
 
-  apt::setting { 'conf-update-stamp':
-    priority => 15,
-    content  => template('apt/_conf_header.erb', 'apt/15update-stamp.erb'),
-  }
+  $root           = $apt::params::root
+  $apt_conf_d     = $apt::params::apt_conf_d
+  $sources_list_d = $apt::params::sources_list_d
+  $provider       = $apt::params::provider
 
   file { 'sources.list':
-    ensure  => file,
-    path    => $::apt::sources_list,
+    ensure  => present,
+    path    => "${root}/sources.list",
     owner   => root,
     group   => root,
     mode    => '0644',
     content => $sources_list_content,
-    notify  => Class['apt::update'],
+    notify  => Exec['apt_update'],
   }
 
   file { 'sources.list.d':
     ensure  => directory,
-    path    => $::apt::sources_list_d,
+    path    => $sources_list_d,
     owner   => root,
     group   => root,
-    mode    => '0644',
-    purge   => $_purge['sources.list.d'],
-    recurse => $_purge['sources.list.d'],
-    notify  => Class['apt::update'],
+    purge   => $purge_sources_list_d,
+    recurse => $purge_sources_list_d,
+    notify  => Exec['apt_update'],
   }
 
-  file { 'preferences':
-    ensure => $preferences_ensure,
-    path   => $::apt::preferences,
-    owner  => root,
-    group  => root,
-    mode   => '0644',
-    notify => Class['apt::update'],
+  case $disable_keys {
+    true: {
+      file { '99unauth':
+        ensure  => present,
+        content => "APT::Get::AllowUnauthenticated 1;\n",
+        path    => "${apt_conf_d}/99unauth",
+      }
+    }
+    false: {
+      file { '99unauth':
+        ensure => absent,
+        path   => "${apt_conf_d}/99unauth",
+      }
+    }
+    undef:   { } # do nothing
+    default: { fail('Valid values for disable_keys are true or false') }
   }
 
-  file { 'preferences.d':
-    ensure  => directory,
-    path    => $::apt::preferences_d,
-    owner   => root,
-    group   => root,
-    mode    => '0644',
-    purge   => $_purge['preferences.d'],
-    recurse => $_purge['preferences.d'],
-    notify  => Class['apt::update'],
+  if ($proxy_host) {
+    file { 'configure-apt-proxy':
+      path    => "${apt_conf_d}/proxy",
+      content => "Acquire::http::Proxy \"http://${proxy_host}:${proxy_port}\";",
+      notify  => Exec['apt_update'],
+    }
   }
 
-  if $confs {
-    create_resources('apt::conf', $confs)
-  }
-  # manage sources if present
-  if $sources {
-    create_resources('apt::source', $sources)
-  }
-  # manage keys if present
-  if $keys {
-    create_resources('apt::key', $keys)
-  }
-  # manage ppas if present
-  if $ppas {
-    create_resources('apt::ppa', $ppas)
-  }
-  # manage settings if present
-  if $settings {
-    create_resources('apt::setting', $settings)
-  }
-
-  # manage pins if present
-  if $pins {
-    create_resources('apt::pin', $pins)
-  }
+  motd::register { 'Apt' : }
 }
