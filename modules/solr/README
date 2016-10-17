@@ -1,0 +1,52 @@
+= PUPPET MODULE:
+  solr
+
+== REQUIREMENTS:
+
+=== Platform and Application Environment:
+
+Tested on Ubuntu 12.04.
+
+== USAGE:
+
+# Simple default install
+
+class { 'solr' : }
+include solr
+
+# The AntiClass pattern
+
+class { 'solr' : installed => false }
+
+== CAVEATS:
+
+May work on other platforms. Only tested on Ubuntu 12.04. Currently
+Ubuntu/Debian is only explicitly supported vi the params.pp. You can add other
+OS support via that class.
+
+If you want Solr to notify the servlet engine (currently supported Jetty or
+Tomcat) you will need to add the notify relationship at the level including
+both Solr and Jetty/Tomcat.
+
+For example:
+
+node 'search' {
+  include jetty
+  include jetty::service
+  include solr
+  Class[solr] ~> Class[jetty::service]
+}
+
+== LICENSE:
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

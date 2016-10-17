@@ -1,0 +1,50 @@
+### htcacheclean settings ###
+
+## run htcacheclean: yes, no, auto
+## auto means run if /etc/apache2/mods-enabled/disk_cache.load exists
+## default: auto
+<% if @apache_htcacheclean_run -%>
+HTCACHECLEAN_RUN=<%= @apache_htcacheclean_run %>
+<% else -%>
+HTCACHECLEAN_RUN=auto
+<% end -%>
+
+## run mode: cron, daemon
+## run in daemon mode or as daily cron job
+## default: daemon
+<% if @apache_htcacheclean_mode -%>
+HTCACHECLEAN_MODE=<%= @apache_htcacheclean_mode %>
+<% else -%>
+HTCACHECLEAN_MODE=daemon
+<% end -%>
+
+## cache size 
+<% if @apache_htcacheclean_size -%>
+HTCACHECLEAN_SIZE=<%= @apache_htcacheclean_size %>
+<% else -%>
+HTCACHECLEAN_SIZE=300M
+<% end -%>
+
+## interval: if in daemon mode, clean cache every x minutes
+<% if @apache_htcacheclean_daemon_interval -%>
+HTCACHECLEAN_DAEMON_INTERVAL=<%= @apache_htcacheclean_daemon_interval %>
+<% else -%>
+HTCACHECLEAN_DAEMON_INTERVAL=120
+<% end -%>
+
+## path to cache
+## must be the same as in CacheRoot directive
+<% if @apache_htcacheclean_path -%>
+HTCACHECLEAN_PATH=<%= @apache_htcacheclean_path %>
+<% else -%>
+HTCACHECLEAN_PATH=/var/cache/apache2/mod_disk_cache
+<% end -%>
+
+## additional options:
+## -n : be nice
+## -t : remove empty directories
+<% if @apache_htcacheclean_options -%>
+HTCACHECLEAN_OPTIONS="<%= @apache_htcacheclean_options %>"
+<% else -%>
+HTCACHECLEAN_OPTIONS="-n"
+<% end -%>

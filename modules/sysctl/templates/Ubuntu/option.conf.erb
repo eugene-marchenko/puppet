@@ -1,0 +1,4 @@
+<% if scope.lookupvar('comment') != :undef -%>
+#<%= scope.lookupvar('comment') %>
+<% end -%>
+<%= scope.lookupvar('name') %> = <%= scope.lookupvar('value') %>

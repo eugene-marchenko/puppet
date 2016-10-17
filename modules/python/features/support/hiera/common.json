@@ -1,0 +1,23 @@
+{ "custom_packages" : {
+    "python" : {
+      "ensure" : "latest",
+      "provider" : "apt"
+    },
+    "python3" : {
+      "ensure" : "latest",
+      "provider" : "apt"
+    },
+    "mechanize" : { 
+      "ensure" : "latest",
+      "provider" : "pip"
+    },
+    "cheetah" : { 
+      "ensure" : "uninstalled",
+      "provider" : "pip"
+    },
+    "jinja2" : { 
+      "ensure" : "present",
+      "provider" : "pip"
+    }
+  }
+}

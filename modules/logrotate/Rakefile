@@ -1,0 +1,10 @@
+require 'cucumber-puppet/rake/task'
+require 'puppet-lint/tasks/puppet-lint'
+
+task :default => [:test]
+
+CucumberPuppetRakeTask.new(:test) do |t|
+  t.cucumber_opts = %w{--format progress}
+end
+
+PuppetLint.configuration.send("disable_80chars")

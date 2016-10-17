@@ -1,0 +1,13 @@
+<% if comment != :undef -%>
+# <%= comment %>
+<% else -%>
+<% end -%>
+<% if environment != :undef -%>
+<%= environment %>
+<% else -%>
+<% end -%>
+<% if enabled -%>
+<%= minute %> <%= hour %> <%= day_of_month %> <%= month %> <%= day_of_week %> <%= user %> <%= command %>
+<% else -%>
+#<%= minute %> <%= hour %> <%= day_of_month %> <%= month %> <%= day_of_week %> <%= user %> <%= command %>
+<% end -%>

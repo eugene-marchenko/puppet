@@ -1,0 +1,14 @@
+---
+:backends: - json
+           - puppet 
+
+:logger: - console
+
+:hierarchy: - '%{location}'
+            - common
+
+:json:
+  :datadir: support/hiera/
+
+:puppet:
+  :datasource: - params

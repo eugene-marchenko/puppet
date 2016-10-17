@@ -1,0 +1,6 @@
+{ 
+  "lvm2_custom_packages" : {
+    "lvm21" : {},
+    "lvm22" : {}
+  }
+}

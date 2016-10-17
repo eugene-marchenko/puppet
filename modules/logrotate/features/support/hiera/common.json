@@ -1,0 +1,13 @@
+{ 
+  "logrotate_custom_packages" : {
+    "logrotate" : {}
+  },
+  "logrotate_custom_configs" : {
+    "/etc/logrotate.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0444"
+    }
+  }
+}

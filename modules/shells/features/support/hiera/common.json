@@ -1,0 +1,18 @@
+{ "shells_custom_service" : { 
+    "shells" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "shells_custom_packages" : {
+    "shells" : {}
+  },
+  "shells_custom_configs" : {
+    "/etc/shells/shells.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

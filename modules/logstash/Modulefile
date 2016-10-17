@@ -1,0 +1,7 @@
+name    'logstash'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/logstash'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages logstash packages, services and config'
+description 'Manages logstash packages, services and configs'

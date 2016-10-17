@@ -1,0 +1,24 @@
+# ************************************
+# Default template in module puppetlabs-apache
+# Managed by Puppet
+# ************************************
+
+<VirtualHost <%= vhost_name %>:<%= port %>>
+<% if ssl == true -%>
+  SSLEngine On
+  SSLCertificateFile <%= ssl_cert %>
+  SSLCertificateKeyFile <%= ssl_key %>
+<% if ssl_chain != '' -%>
+  SSLCertificateChainFile <%= ssl_chain %>
+<% end -%>
+<% end -%>
+  ServerName <%= srvname %>
+<% if serveraliases.is_a? Array -%>
+<% serveraliases.each do |name| -%><%= "  ServerAlias #{name}\n" %><% end -%>
+<% elsif serveraliases != '' -%>
+<%= "  ServerAlias #{serveraliases}" -%>
+<% end -%>
+  Redirect <%= status %> / <%= dest %>/
+
+</VirtualHost>
+

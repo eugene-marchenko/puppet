@@ -1,0 +1,10 @@
+name    'solr'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/solr'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages solr packages, services, configs for solr'
+description 'Manages solr packages, services, configs for solr'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

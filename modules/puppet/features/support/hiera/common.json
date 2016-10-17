@@ -1,0 +1,7 @@
+{ "puppet_custom_service" : { 
+    "puppet" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  }
+}

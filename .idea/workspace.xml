@@ -2,117 +2,422 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/CHANGELOG" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Modulefile" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/REVISION" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/checksums.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/backports.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/builddep.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/debian_testing.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/debian_unstable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/disable_keys.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/fancy_progress.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/force.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/hold.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/key.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/pin.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/release.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/source.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/examples/unattended_upgrades.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_reboot_required.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_update_last_success.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/facter/apt_updates.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet/provider/apt_key/apt_key.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet/type/apt_key.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/lib/puppet_x/apt_key/patch_openuri.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/catalog/policy.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/manifests/site.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_testing.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_debian_unstable.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_force.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_init.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_params.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_pin.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_ppa.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_release.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/modules/apt/apt_source.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/puppet.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/cron.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/exec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/package.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/puppet.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/service.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/steps/user.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/support/hooks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/features/support/world.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/backports.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/builddep.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/conf.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/debian/testing.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/debian/unstable.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/force.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/init.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/key.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/params.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/pin.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/ppa.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/setting.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/release.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/source.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/manifests/update.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/apt_key_provider_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/apt_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/class_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/centos-7-x64.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/debian-8-x64.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/default.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/centos-7.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/debian-8.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/acceptance/nodesets/docker/ubuntu-14.04.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_backports_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/apt_update_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/backports_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/debian_testing_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/debian_unstable_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/params_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/classes/release_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/builddep_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/conf_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/key_compat_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/force_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/key_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/pin_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/ppa_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/setting_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/source_compat_spec.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/defines/source_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/fixtures/manifests/site.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/spec_helper_acceptance.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_has_updates_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_package_updates_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_reboot_required_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_security_updates_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_update_last_success_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/facter/apt_updates_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/spec/unit/puppet/type/apt_key_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/15update-stamp.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/_conf_header.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/_header.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/conf.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/pin.pref.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/proxy.erb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/templates/source.list.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/builddep.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/debian/testing.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/debian/unstable.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/force.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/key.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/pin.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/ppa.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/release.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/apt/tests/source.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/files/concatfragments.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/lib/facter/concat_basedir.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/lib/puppet/parser/functions/concat_getparam.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/lib/puppet/parser/functions/concat_is_bool.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/fragment.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/manifests/setup.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/backup_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/concat_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/deprecation_warnings_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/empty_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/fragment_source_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/fragments_are_always_replaced_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/newline_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/aix-71-vcloud.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/centos-59-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/centos-64-x64-pe.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/centos-64-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/centos-65-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/debian-607-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/debian-70rc1-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/debian-73-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/default.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/fedora-18-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/sles-11-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/sles-11sp1-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/ubuntu-server-10044-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/ubuntu-server-12042-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/nodesets/ubuntu-server-1404-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/order_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/quoted_paths_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/replace_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/specinfra_stubs.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/symbolic_name_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/validation_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/acceptance/warn_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/spec_helper_acceptance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/unit/classes/concat_setup_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/unit/defines/concat_fragment_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/unit/defines/concat_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/spec/unit/facts/concat_basedir_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/tests/fragment.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/concat/tests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Modulefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/README" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/checksums.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/files/dhcpd.hosts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/files/dhcpd.pools" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/disable.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/failover.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/host.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/ignoredsubnet.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/hiera.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/manifests/site.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_config.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_init.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_package.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/modules/dhcp_service.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/puppet.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/augeas.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/cron.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/exec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/mailalias.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/package.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/puppet.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/service.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/steps/user.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/hiera/common.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/hooks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/matchers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/features/support/world.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/config.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/init.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/monitor.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/package.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/params.pp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/pool.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/manifests/service.pp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/classes/dhcp_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/defines/host_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/defines/pool_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/lib/module_spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/spec/spec_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/debian/default_isc-dhcp-server" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf-extra.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf-header.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.ddns.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.failover.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.ntp.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.conf.pxe.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.host.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.ignoredsubnet.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcpd.pool.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/redhat/sysconfig-dhcpd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/tests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/dhcp/templates/dhcp_prepend.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/examples/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/deep_merge.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/eyaml.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/eyaml_gpg.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/install.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/hiera_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/centos-511-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/centos-66-x64-pe.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/centos-66-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/centos-72-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/debian-78-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/debian-82-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/pe-redhat-7-vcloud.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/pe-ubuntu-1404-vcloud.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/redhat-7-vcloud.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/ubuntu-1404-vcloud.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/ubuntu-server-1204-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/acceptance/nodesets/ubuntu-server-1404-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/classes/coverage_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/classes/hiera_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/default_facts.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/spec/spec_helper_acceptance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hiera/templates/hiera.yaml.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/Modulefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/hiera.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/manifests/site.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/modules/hosts_config.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/modules/hosts_init.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/modules/hosts_manage.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/puppet.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/augeas.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/cron.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/exec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/mailalias.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/package.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/puppet.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/service.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/steps/user.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/support/helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/support/hiera/common.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/support/hooks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/support/matchers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/features/support/world.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/manifests/config.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/manifests/manage.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/hosts/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/examples/ini_setting.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/examples/ini_subsetting.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/parser/functions/create_ini_settings.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/provider/ini_setting/ruby.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/provider/ini_subsetting/ruby.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/type/ini_setting.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/type/ini_subsetting.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/util/external_iterator.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/util/ini_file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/util/ini_file/section.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/lib/puppet/util/setting_value.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/ini_setting_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/ini_subsetting_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/centos-7-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/debian-8-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/default.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/docker/centos-7.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/docker/debian-8.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/acceptance/nodesets/docker/ubuntu-14.04.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/classes/create_ini_settings_test_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/classes/create_multiple_ini_settings_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/classes/inherit_test1_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/fixtures/create_multiple_ini_settings/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/fixtures/tmp/.empty" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/functions/create_ini_settings_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/spec_helper_acceptance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/spec_helper_local.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/provider/ini_setting/inheritance_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/provider/ini_setting/ruby_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/provider/ini_subsetting/ruby_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/type/ini_setting_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/type/ini_subetting_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/util/external_iterator_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/util/ini_file_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/inifile/spec/unit/puppet/util/setting_value_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/facter/lvm_support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/filesystem/aix.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/filesystem/lvm.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/logical_volume/aix.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/logical_volume/lvm.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/physical_volume/aix.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/physical_volume/lvm.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/volume_group/aix.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/provider/volume_group/lvm.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/type/filesystem.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/type/logical_volume.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/type/physical_volume.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/lib/puppet/type/volume_group.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/manifests/logical_volume.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/manifests/volume.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/manifests/volume_group.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/lib/helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/lib/matchers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/classes/lvm_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/facter/lvm_support_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/provider/filesystem/lvm_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/provider/logical_volume/lvm_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/provider/physical_volume/lvm_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/provider/volume_group/lvm_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/type/filesystem_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/type/logical_volume_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/type/physical_volume_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/puppet/type/volume_group_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/type/filesystem_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/type/logical_volume_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/lvm/spec/unit/type/physical_volume.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Modulefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/hiera.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/manifests/site.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/modules/motd_init.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/modules/motd_register.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/puppet.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/augeas.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/cron.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/exec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/file.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/mailalias.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/package.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/puppet.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/service.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/steps/user.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/hiera/common.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/hooks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/matchers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/features/support/world.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/manifests/register.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/Ubuntu/motd.tail.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/motd/templates/test.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/NOTICE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/lib/puppet/parser/functions/ntp_dirname.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/manifests/config.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/manifests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/manifests/install.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/manifests/params.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/manifests/service.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/class_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/disable_monitoring_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/centos-7-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/debian-8-x64.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/default.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/docker/centos-7.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/docker/debian-8.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/nodesets/docker/ubuntu-14.04.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/ntp_config_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/ntp_install_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/ntp_parameters_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/ntp_service_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/preferred_servers_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/restrict_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/acceptance/unsupported_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/classes/ntp_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/spec_helper_acceptance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/unit/puppet/provider/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/spec/unit/puppet/type/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/templates/keys.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/templates/ntp.conf.erb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/ntp/tests/init.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/Gemfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/.beaker-git.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/.beaker-pe.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/masterless-windows-2008-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/masterless-windows-2008r2-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/masterless-windows-2012-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/masterless-windows-2012r2-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/windows-2003r2-i386.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/windows-2003r2-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/windows-2008r2-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/config/windows-2012-x86_64.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/lib/systest.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/lib/systest/util.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/lib/systest/util/registry.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/setup/install_puppet.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/tests/resource/registry/should_create_key.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/tests/resource/registry/should_have_defined_type.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/tests/resource/registry/should_manage_values.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/acceptance/tests/resource/registry/should_tolerate_mixed_case.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/checksums.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/examples/compliance_example.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/examples/purge_example.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/examples/registry_examples.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/examples/service_example.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet/provider/registry_key/registry.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet/provider/registry_value/registry.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet/type/registry_key.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet/type/registry_value.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet_x/puppetlabs/registry.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/lib/puppet_x/puppetlabs/registry/provider_base.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/manifests/service.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/manifests/value.pp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/unit/puppet/provider/registry_key_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/unit/puppet/provider/registry_value_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/unit/puppet/type/registry_key_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/unit/puppet/type/registry_value_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/registry/spec/watchr.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,77 +439,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="init.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/hosts/manifests/init.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="50" column="20" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/motd/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apt_spec.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/apt/spec/classes/apt_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/hosts/manifests/manage.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="params.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/hosts/manifests/params.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="install.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/ntp/manifests/install.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="params.pp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/ntp/manifests/params.pp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-816">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.pp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.pp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/roles/manifests/base.pp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -237,7 +472,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="328" />
+    <option name="x" value="252" />
     <option name="y" value="52" />
     <option name="width" value="1461" />
     <option name="height" value="1028" />
@@ -289,254 +524,6 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="facter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stdlib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="facter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="motd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="puppet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -568,7 +555,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cq5/git/puppet" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -724,7 +711,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="13635000" />
+      <workItem from="1476359448257" duration="14120000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -744,13 +731,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13635000" />
+    <option name="totallyTimeSpent" value="14120000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="328" y="52" width="1461" height="1028" extended-state="4" />
-    <editor active="true" />
+    <frame x="252" y="52" width="1461" height="1028" extended-state="4" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25159913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1165,14 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/hosts/manifests/init.pp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/motd/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1185,6 +1164,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/hosts/manifests/init.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="20" />
           <folding />
         </state>
       </provider>

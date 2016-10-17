@@ -1,110 +1,27 @@
 {
-  "name": "puppetlabs-concat",
-  "version": "1.2.5",
-  "author": "Puppet Labs",
-  "summary": "Construct files from multiple fragments.",
-  "license": "Apache-2.0",
-  "source": "https://github.com/puppetlabs/puppetlabs-concat",
-  "project_page": "https://github.com/puppetlabs/puppetlabs-concat",
-  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "license": "Apache",
+  "version": "0.1.0",
+  "source": "git://github.com/ripienaar/puppet-concat.git",
+  "types": [
+
+  ],
+  "description": "Concat module",
+  "project_page": "http://github.com/ripienaar/puppet-concat",
+  "summary": "Concat module",
+  "author": "R.I.Pienaar",
+  "name": "puppet-concat",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 3.2.0 < 5.0.0"}
+
   ],
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Scientific",
-      "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "10 SP4",
-        "11 SP1",
-        "12"
-      ]
-    },
-    {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "6",
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "10.04",
-        "12.04",
-        "14.04"
-      ]
-    },
-    {
-      "operatingsystem": "Solaris",
-      "operatingsystemrelease": [
-        "10",
-        "11"
-      ]
-    },
-    {
-      "operatingsystem": "Windows",
-      "operatingsystemrelease": [
-        "Server 2003 R2",
-        "Server 2008 R2",
-        "Server 2012",
-        "Server 2012 R2"
-      ]
-    },
-    {
-      "operatingsystem": "AIX",
-      "operatingsystemrelease": [
-        "5.3",
-        "6.1",
-        "7.1"
-      ]
-    },
-    {
-      "operatingsystem": "OSX",
-      "operatingsystemrelease": [
-        "10.9"
-      ]
-    }
-  ],
-  "requirements": [
-    {
-      "name": "pe",
-      "version_requirement": ">= 3.0.0 < 2015.4.0"
-    },
-    {
-      "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 5.0.0"
-    }
-  ]
+  "checksums": {
+    "README.markdown": "511283ab9e3f4269e240e25aee3755c1",
+    "LICENSE": "f5a76685d453424cd63dde1535811cf0",
+    "CHANGELOG": "ed71b32c6619a73faa7ea9c5f779c6c5",
+    "manifests/setup.pp": "09e31d95606eb2d809697afb5e834c8e",
+    "lib/facter/concat_basedir.rb": "f2e991697602ffb3e80e0cc9efa37f3a",
+    "Modulefile": "feb759ceb87b06eea7ad60eb5f258642",
+    "manifests/fragment.pp": "8b42bd5f86166939dcb3d96f7faec7e2",
+    "manifests/init.pp": "7da138501ec4976acb81822941edadd5",
+    "files/concatfragments.sh": "256169ee61115a6b717b2844d2ea3128"
+  }
 }

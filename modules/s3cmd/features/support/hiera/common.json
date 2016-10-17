@@ -1,0 +1,6 @@
+{ 
+  "s3cmd_custom_packages" : {
+    "s3cmd1" : {},
+    "s3cmd2" : {}
+  }
+}

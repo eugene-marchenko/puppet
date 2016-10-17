@@ -1,0 +1,9 @@
+name    'mlocate'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/mlocate'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages mlocate packages, services, configs for mlocate'
+description 'Manages mlocate packages, services, configs for mlocate'
+
+## Add dependencies, if any:

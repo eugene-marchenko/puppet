@@ -1,0 +1,15 @@
+{ "custom_packages" : {
+    "aws-sdk" : { 
+      "ensure" : "latest" 
+    },
+    "nokogiri" : { 
+      "ensure" : "uninstalled" 
+    },
+    "rdoc" : {
+        "ensure" : "latest"
+    },
+    "bundle" : {
+        "ensure" : "latest"
+    }
+  }
+}

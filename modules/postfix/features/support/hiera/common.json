@@ -1,0 +1,20 @@
+{ "postfix_custom_service" : { 
+    "postfix" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "postfix_custom_packages" : {
+    "postfix" : { 
+      "ensure" : "2.9.1-4" 
+    }
+  },
+  "postfix_custom_configs" : {
+    "/opt/postfix/main.cf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

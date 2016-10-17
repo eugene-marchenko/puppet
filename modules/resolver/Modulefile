@@ -1,0 +1,10 @@
+name    'resolver'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/resolver'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages resolver packages, services, configs for resolver'
+description 'Manages resolver packages, services, configs for resolver'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

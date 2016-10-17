@@ -1,0 +1,8 @@
+filter {
+  multiline {
+    type => "remote-rsyslog"
+    pattern => "^\t"
+    what => "previous"
+  }
+}
+

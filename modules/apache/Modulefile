@@ -1,0 +1,10 @@
+name    'apache'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/apache'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages apache packages, services, configs for apache'
+description 'Manages apache packages, services, configs for apache'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

@@ -1,0 +1,7 @@
+{ "monit_custom_service" : { 
+    "monit" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  }
+}

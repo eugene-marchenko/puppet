@@ -1,0 +1,10 @@
+name    'snmpd'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/snmpd'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages snmpd packages, services, configs for snmpd'
+description 'Manages snmpd packages, services, configs for snmpd'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

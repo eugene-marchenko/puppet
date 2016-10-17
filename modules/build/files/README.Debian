@@ -1,0 +1,146 @@
+DEBIAN PACKAGING README
+========
+
+DH_MAKE:
+========
+To debianize a package, cd into the package dir and execute the dh_make command.
+
+E.g you have a project directory named, ~/foo-1.0.1:
+
+# cd ~/foo-1.0.1
+# dh_make -e webops@newsweek.com -c apache
+
+This will create a ~/foo-1.0.1/debian directory
+
+You will then want to customize at least the following files:
+
+~/foo-1.0.1/debian/copyright
+~/foo-1.0.1/debian/control
+~/foo-1.0.1/debian/install <--- More on this below:
+~/foo-1.0.1/debian/dirs    <--- More on this below:
+
+CAVEAT: There must be an original tarfile who's name matches the project dir.
+        I.E. ~/foo-1.0.1.orig.tar.gz and ~/foo-1.0.1
+        
+        If you do not have an original tarfile, pass --createorig to dh_make
+
+DIRS FILE:
+========
+The debian/dirs file sets up the directory structure for the debian package.
+For instance, the typical directory structure would place executable files in:
+
+/usr/bin
+
+Library files in
+
+/usr/lib
+
+Miscellaneous files in 
+
+/usr/share/<project_name>
+
+Configuration files in
+
+/etc/<project_name>
+
+So for example, your dirs file could look something like this for the foo project:
+---
+etc/foo
+usr/bin
+usr/lib
+usr/share/foo
+
+
+INSTALL FILE
+========
+The debian/install file is what tells the debian build scripts which files
+belong in the debian package. Say you have a flat project dir like the following:
+
+foo-1.0.1/foo.sh
+foo-1.0.1/bar.sh
+
+Then you would construct your install file like the following:
+---
+foo.sh usr/bin/
+bar.sh usr/bin/
+
+It can also copy entire directories recursively, i.e.
+---
+lib/* usr/lib/
+
+LINKS FILE
+========
+If you want to have symbolic links in your project, i.e point foo.sh -> baz.sh
+you could do the following in a debian/links file.
+---
+usr/bin/foo.sh usr/bin/baz.sh
+
+PATCHING
+========
+If you need to patch the source files before they are packaged, you'll want
+to use the quilt utility. A typically quilt workflow is the following:
+
+# cd <project_dir>/debian
+# quilt new patching-script-foo.patch
+# quilt add foo.sh
+# quilt edit foo.sh
+# quilt refresh
+
+CAVEAT: You may need to modify the patch file after creating it. I haven't
+        successfully used it on the source files directly, I have to install
+        them first via 'fakeroot debian/rules install', patch the installed
+        file under debian/<project_name>/path/to/file, and then modify the
+        patch file file paths -- removing the debian.old part and using a more
+        git like syntax:
+        --- a/source/file/path/to/file
+        --- b/source/file/path/to/file
+
+CHANGELOG
+========
+You can edit the changelog directly but then you have to create your own
+timestamp and figure out how to bump the rev. dch does this for you (although
+you may have to modify the maintainer name/email afterwards.
+
+Just run 'dch' and it will bring up an editor of the changelog file.
+
+BUILDING SOURCE PACKAGE
+========
+When you're ready to build the source package for submission to launchpad, just
+run 'debuild -S'.
+
+SUBMITTING TO LAUNCHPAD
+========
+The debuild -S should create a source.changes file in the parent directory.
+Simply run the following dput command to upload the file:
+
+dput ppa:<ppa-name>/<repo <pkg>.source.changes'
+
+UPSTREAM CHANGES
+========
+If changes are made to the upstream package (not debian specific changes). You
+can either setup a watch file in the debian directory to automagically pull
+down the latest upstream package and apply the changes or you can do the
+following:
+
+From: <http://www.debian.org/doc/manuals/maint-guide/update.en.html>
+$ apt-get source foo
+...
+dpkg-source: info: extracting foo in foo-oldversion
+dpkg-source: info: unpacking foo_oldversion.orig.tar.gz
+dpkg-source: info: applying foo_oldversion-1.debian.tar.gz
+$ ls -F
+foo-oldversion/
+foo_oldversion-1.debian.tar.gz
+foo_oldversion-1.dsc
+foo_oldversion.orig.tar.gz
+$ wget http://example.org/foo/foo-newversion.tar.gz
+$ cd foo-oldversion
+$ uupdate -v newversion ../foo-newversion.tar.gz
+$ cd ../foo-newversion
+$ while dquilt push; do dquilt refresh; done
+$ dch
+... document changes made
+
+CAVEAT: The dquilt command doesn't seem to exist on Ubuntu, perhaps it's Debian
+        specific. However the quilt command does exist so you could try
+        replacing the above with the quilt command.

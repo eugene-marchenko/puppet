@@ -1,0 +1,37 @@
+# ************************************
+# Default template in module apache
+# Managed by Puppet
+# ************************************
+
+<VirtualHost <%= vhost_name %>:<%= port %>>
+<% if ssl == true -%>
+  SSLEngine On
+  SSLCertificateFile <%= ssl_cert %>
+  SSLCertificateKeyFile <%= ssl_key %>
+<% if ssl_chain != '' -%>
+  SSLCertificateChainFile <%= ssl_chain %>
+<% end -%>
+<% end -%>
+  ServerName <%= srvname %>
+<% if serveraliases.is_a? Array -%>
+<% serveraliases.each do |name| -%><%= "  ServerAlias #{name}\n" %><% end -%>
+<% elsif serveraliases != '' -%>
+<%= "  ServerAlias #{serveraliases}" -%>
+<% end -%>
+  DocumentRoot <%= docroot %>
+  <Directory <%= docroot %>>
+    DirectorySlash Off
+    Options <%= options %>
+    AllowOverride None
+    Order allow,deny
+    allow from all
+    <IfModule disp_apache2.c>
+      SetHandler dispatcher-handler
+    </IfModule>
+  </Directory>
+  ErrorLog <%= log_dir %>/<%= srvname %>_error.log
+  LogLevel warn
+  CustomLog <%= log_dir %>/<%= srvname %>_access.log combined
+  ServerSignature Off
+</VirtualHost>
+

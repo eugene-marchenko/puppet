@@ -1,0 +1,10 @@
+name    'sasl'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/sasl'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages sasl packages, services, configs for sasl'
+description 'Manages sasl packages, services, configs for sasl'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

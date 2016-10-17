@@ -1,0 +1,18 @@
+{ "resolver_custom_service" : { 
+    "resolver" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "resolver_custom_packages" : {
+    "resolver" : {}
+  },
+  "resolver_custom_configs" : {
+    "/etc/resolver/resolver.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

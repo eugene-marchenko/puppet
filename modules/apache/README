@@ -1,0 +1,408 @@
+= PUPPET MODULE:
+  apache
+
+== REQUIREMENTS:
+
+=== Platform and Application Environment:
+
+Tested on Ubuntu 12.04.
+
+== USAGE:
+
+# Simple default install
+
+class { 'apache' : }
+include apache
+
+# The AntiClass pattern
+
+class { 'apache' : installed => false }
+
+## Vhosts
+
+# Typically just apache will not be installed. Vhosts, modules, etc are a more
+# common use case.
+
+# Install a vhost
+apache::vhost { 'www.example.com' :
+  port    => '80',
+  docroot => '/var/www/www.example.com',
+}
+
+# Install a vhost with one serveralias
+apache::vhost { 'www.example.com' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  serveralias => 'foo.example.com',
+}
+
+# Install a vhost with multiple serveraliases
+apache::vhost { 'www.example.com' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  serveralias => [ 'foo.example.com', 'bar.example.com' ],
+}
+
+# Install a vhost with a different logdir path than /var/log/apache2
+apache::vhost { 'www.example.com' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  log_dir     => '/mnt/log/apache2',
+}
+
+# You can create the file with a different vhost servername
+apache::vhost { 'my-website' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  servername  => 'www.example.com',
+}
+
+# You can specify different options than Index FollowSymLinks MultiViews
+apache::vhost { 'www.example.com' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  options     => 'None',
+}
+
+# You can specify an ACL to allow certain hosts/IP blocks access to the site
+apache::vhost { 'www.example.com' :
+  port        => '80',
+  docroot     => '/var/www/www.example.com',
+  allow       => [ '127.0.0.0/8', '169.254.169.254/24' ],
+}
+
+# You can specify a priority for the site so that it gets matched before other
+# sites
+apache::vhost { 'www.example.com' :
+  port      => '80',
+  docroot   => '/var/www/www.example.com',
+  priority  => '10',
+}
+
+apache::vhost { 'foo.example.com' :
+  port          => '80',
+  docroot       => '/var/www/foo.example.com',
+  serveraliases => '*.example.com',
+}
+
+# This is a bit less common, but you can specify an alternate ports.conf
+# The ports.conf is where Listen and NameVirtualHost directives are added
+# automatically based off of the port parameter in the vhost
+apache::vhost { 'www.example.com' :
+  port        => '8080',
+  docroot     => '/var/www/www.example.com',
+  ports_conf  => '/etc/apache2/ports-custom.conf',
+}
+
+# You can specify a different template than the default one to be used for more
+# customized vhosts
+apache::vhost { 'www.example.com' :
+  port        => '8080',
+  docroot     => '/var/www/www.example.com',
+  template    => 'custom_module/path/to/custom/template.erb',
+}
+
+# You can have this vhost redirect to an ssl enabled virtualhost
+apache::vhost { 'www.example.com' :
+  port          => '80',
+  docroot       => '/var/www/www.example.com',
+  redirect_ssl  => true,
+}
+
+# You can enable SSL on this vhost
+apache::vhost { 'www.example.com' :
+  port      => '443',
+  docroot   => '/var/www/www.example.com',
+  ssl       => true,
+}
+
+# There is a proxy vhost for use when you want the vhost to proxy to another
+# host
+apache::vhost::proxy { 'ssl.example.com' :
+  port    => '443',
+  docroot => '/var/www',
+  ssl     => true,
+  dest    => 'http://www.example.com',
+}
+
+# You can set a series of files to deny proxying of
+apache::vhost::proxy { 'www.example.com' :
+  port    => '80',
+  docroot => '/var/www',
+  dest    => 'http://www.example.com',
+  proxy_deny  => [ '/foo.txt', '/some/file.txt' ],
+}
+
+# You can specify a sub-directory to proxy
+apache::vhost::proxy { 'www.example.com' :
+  port    => '80',
+  docroot => '/var/www',
+  src     => '/proxy/directory',
+  dest    => 'http://www.example.com',
+}
+
+# The other parameters from apache::vhost are also available to
+# apache::vhost::proxy
+
+# You can set up a 301 simple redirect vhost using mod_alias's Redirect
+# directive
+apache::vhost::redirect { 'www.example.com' :
+  port  => '80',
+  dest  => 'http://some.other.host',
+}
+
+## Apache Dispatcher
+
+# The Apache dispatcher section is CQ specific, it adds the necessary dispatch
+# module, the dispatcher.any file and the vhost config.
+# 
+# It should be noted that if you specify multiple dispatch vhosts, you'll want
+# to set the d_tmpl_priority parameter. This is used by the concat module to
+# order the concat fragments for creating the dispatcher.any file.
+apache::dispatcher::vhost { 'www.example.com' :
+  port            => '80',
+  renders         => [ 'app1.example.com', 'app2.example.com' ],
+  docroot         => '/mnt/dispatcher/www.example.com',
+  priority        => '10',
+  d_tmpl_priority => '10',
+}
+
+apache::dispatcher::vhost { 'foo.example.com' :
+  port            => '80',
+  renders         => [ 'app1.example.com', 'app2.example.com' ],
+  docroot         => '/mnt/dispatcher/foo.example.com',
+  priority        => '11',
+  d_tmpl_priority => '11',
+}
+
+# The apache::dispatcher::vhost also accepts the same parameters as are offered
+# in the apache::vhost define
+
+# If there are files specific to the apache::dispatcher::vhost virtualhost you
+# have defined, such as files that are included via that vhost file, you can
+# use the following to create those files. They are created by default under
+# /etc/apache2/<vhost-name>
+
+# You can specify it by template
+apache::dispatcher::vhost::file { 'file.txt' :
+  servername  => 'www.example.com',
+  template    => 'custom_module/path/to/template.erb',
+}
+
+# You can specify it by source
+apache::dispatcher::vhost::file { 'file.txt' :
+  servername  => 'www.example.com',
+  source      => 'puppet:///custom_module/path/to/file.txt',
+}
+
+# You can specify it by content
+apache::dispatcher::vhost::file { 'file.txt' :
+  servername  => 'www.example.com',
+  content     => 'foo',
+}
+
+# You can specify an alternate path
+apache::dispatcher::vhost::file { 'file.txt' :
+  servername  => 'www.example.com',
+  content     => 'foo',
+  path        => '/mnt/some/path/file.txt',
+}
+
+# You can remove it
+apache::dispatcher::vhost::file { 'file.txt' :
+  servername  => 'www.example.com',
+  ensure      => 'absent',
+  content     => 'foo',
+}
+
+## Modules
+
+# The following modules are supported as non-default modules (i.e. modules that
+# aren't included in the default apache package)
+# [ passenger, php, python, wsgi ]
+
+# You can include them by simply
+include apache::mod::passenger
+include apache::mod::php
+include apache::mod::python
+include apache::mod::wsgi
+
+# The following list of modules are part of the standard apache distro. They
+# are created as virtual resources in the apache class. To realize them, you
+# simple need to A2mod <| title == 'module_name' |>
+* actions
+* alias
+* asis
+* auth_basic
+* auth_digest
+* authn_alias
+* authn_anon
+* authn_dbd
+* authn_dbm
+* authn_default
+* authn_file
+* authnz_ldap
+* authz_dbm
+* authz_default
+* authz_host
+* authz_user
+* autoindex
+* cache
+* cern_meta
+* cgid
+* cgi
+* charset_lite
+* dav_fs
+* dav
+* dav_lock
+* dbd
+* deflate
+* dir
+* disk_cache
+* dump_io
+* env
+* expires
+* ext_filter
+* file_cache
+* filter
+* headers
+* ident
+* imagemap
+* include
+* info
+* ldap
+* log_forensic
+* mem_cache
+* mime
+* mime_magic
+* negotiation
+* proxy_ajp
+* proxy_balancer
+* proxy_connect
+* proxy_ftp
+* proxy_http
+* proxy
+* proxy_scgi
+* reqtimeout
+* rewrite
+* setenvif
+* speling
+* ssl
+* status
+* substitute
+* suexec
+* unique_id
+* userdir
+* usertrack
+* version
+* vhost_alias
+
+## Facts
+
+# The following facts modify how apache configures itself
+
+# /etc/apache2/apache2.conf
+apache_server_root
+apache_lock_file
+apache_timeout
+apache_max_keep_alive_requests
+apache_keep_alive_timeout
+apache_prefork_start_servers
+apache_prefork_min_spare_servers
+apache_prefork_max_spare_servers
+apache_prefork_max_clients
+apache_prefork_max_requests_per_child
+apache_worker_start_servers
+apache_worker_min_spare_threads
+apache_worker_max_spare_threads
+apache_worker_thread_limit
+apache_worker_threads_per_child
+apache_worker_max_clients
+apache_worker_max_requests_per_child
+apache_event_start_servers
+apache_event_min_spare_threads
+apache_event_max_spare_threads
+apache_event_thread_limit
+apache_event_threads_per_child
+apache_event_max_clients
+apache_event_max_requests_per_child
+apache_default_type
+apache_default_error_log
+apache_log_level
+
+# /etc/default/apache2
+apache_htcacheclean_run
+apache_htcacheclean_mode
+apache_htcacheclean_size
+apache_htcacheclean_daemon_interval
+apache_htcacheclean_path
+apache_htcacheclean_options
+
+# /etc/apache2/envvars
+apache_run_user
+apache_run_group
+apache_pid_file
+apache_run_dir
+apache_lock_dir
+apache_log_dir
+apache_env_lang
+apache_use_system_locale
+apache_status_command
+apache_max_files
+
+# /etc/logrotate.d/apache2
+apache_log_dir
+
+# /etc/apache2/conf.d/security
+apache_disable_root_fs_access
+apache_server_tokens
+apache_server_signature
+apache_trace_enable
+
+# /etc/apache2/mods-available/dispatcher.conf
+apache_dispatcher_conf
+apache_dispatcher_log
+apache_dispatcher_log_level
+apache_dispatcher_no_server_header
+apache_dispatcher_decline_root
+apache_dispatcher_use_processed_url
+apache_dispatcher_pass_error
+
+== CAVEATS:
+
+May work on other platforms. Only tested on Ubuntu 12.04. Currently
+Ubuntu/Debian is only explicitly supported vi the params.pp. You can add other
+OS support via that class.
+
+If you change the apache_log_dir path, make sure that it's parent directory
+exists
+
+Because apache::dispatcher and apache::dispatcher::vhost use the concat
+module, you cannot specify the following relationship
+
+Apache::Dispatcher -> Apache::Dispatcher::Vhost['www.example.com']
+
+This is because the concat::fragment in Apache::Dispatcher::Vhost notifies
+the concat resource in apache::dispatcher (or rather an Exec resource within
+that define)
+
+The apache::ssl module uses a shamelessly hardcoded ssl file located in the
+newsweek module. As such, it is breaks out-of-the-box use of this module. This
+is a TODO to fix.
+
+== TODO:
+-Abstract out the specific ssl files used by the apache::ssl class
+
+== LICENSE:
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

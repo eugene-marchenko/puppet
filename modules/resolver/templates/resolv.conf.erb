@@ -1,0 +1,18 @@
+# Managed by puppet <%= puppetversion %>
+# /etc/resolv.conf: DNS configuration
+<% if @resolver_domainname -%>
+domain <%= @resolver_domainname %>
+<% else -%>
+domain <%= @domain %>
+<% end -%>
+<% if @resolver_searchpath -%>
+search <%= @resolver_searchpath %>
+<% else -%>
+<% end -%>
+<% if @resolver_nameservers -%>
+<% @resolver_nameservers.split.each do |nameserver| -%>
+nameserver <%= nameserver %>
+<% end -%>
+<% else -%>
+nameserver 18.72.0.3
+<% end -%>

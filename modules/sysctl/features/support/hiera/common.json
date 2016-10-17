@@ -1,0 +1,7 @@
+{ "sysctl_custom_service" : { 
+    "sysctl" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  }
+}

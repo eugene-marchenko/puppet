@@ -1,0 +1,18 @@
+{ "nw_analytics_custom_service" : { 
+    "nw_analytics" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "nw_analytics_custom_packages" : {
+    "nw_analytics" : {}
+  },
+  "nw_analytics_custom_configs" : {
+    "/etc/nw_analytics/nw_analytics.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

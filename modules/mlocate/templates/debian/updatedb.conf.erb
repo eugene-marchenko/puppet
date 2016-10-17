@@ -1,0 +1,20 @@
+<% if @prune_bind_mounts.eql?(true) -%>
+PRUNE_BIND_MOUNTS="yes"
+<% else -%>
+PRUNE_BIND_MOUNTS="no"
+<% end -%>
+<% if @prune_names -%>
+PRUNENAMES="<%= @prune_names %>"
+<% else -%>
+# PRUNENAMES=".git .bzr .hg .svn"
+<% end -%>
+<% if not @prune_paths.empty? -%>
+PRUNEPATHS="<%= @prune_paths.join(" ") %>"
+<% else -%>
+#PRUNEPATHS="/tmp /var/spool /media /home/.encrypfs"
+<% end -%>
+<% if not @prune_fs.empty? -%>
+PRUNEFS="<%= @prune_fs.join(" ") %>"
+<% else -%>
+#PRUNEFS="NFS nfs nfs4 rpc_pipefs afs binfmt_misc proc smbfs autofs iso9660 ncpfs coda devpts ftpfs devfs mfs shfs sysfs cifs lustre_lite tmpfs usbfs udf fuse.glusterfs fuse.sshfs curlftpfs ecryptfs fusesmb devtmpfs" 
+<% end -%>

@@ -1,0 +1,10 @@
+<% if comment != :undef -%>
+# <%= comment %>
+<% end -%>
+<%=  template_name %>
+<%= selector %> <%= destination %>
+<% if discard == true -%>
+# comment out the following line to allow <%= selector %> messages through
+# Doing so means you'll also get <%= selector %> messages in /var/log/syslog
+<%= selector %> ~
+<% end -%>

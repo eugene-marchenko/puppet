@@ -1,0 +1,18 @@
+{ "jetty_custom_service" : { 
+    "jetty" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "jetty_custom_packages" : {
+    "jetty" : {}
+  },
+  "jetty_custom_configs" : {
+    "/etc/jetty/jetty.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

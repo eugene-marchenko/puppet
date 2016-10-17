@@ -1,0 +1,34 @@
+# Time to wait for the server to start, in seconds
+<% if @starttime -%>
+STARTTIME=<%= @starttime %>
+<% else -%>
+STARTTIME=5
+<% end -%>
+
+# !!! Use a specific data directory for each instance
+<% if @base -%>
+ACTIVEMQ_BASE="<%= @base %>"
+<% else -%>
+ACTIVEMQ_BASE="/var/lib/activemq/$INSTANCE"
+<% end -%>
+
+# Use openjdk-6 as default Java runtime
+<% if @java_home -%>
+JAVA_HOME="<%= @java_home %>"
+<% else -%>
+JAVA_HOME="/usr/lib/jvm/java-6-openjdk/"
+<% end -%>
+
+# Set some JVM memory options
+<% if @opts -%>
+ACTIVEMQ_OPTS="<%= @opts -%>"
+<% else -%>
+ACTIVEMQ_OPTS="-Xms<%= @min_heap %>M -Xmx<%= @max_heap %>M -Dorg.apache.activemq.UseDedicatedTaskRunner=true"
+<% end -%>
+
+# Arguments to launch /usr/bin/activemq
+<% if @args -%>
+ACTIVEMQ_ARGS="<%= @args %>"
+<% else -%>
+ACTIVEMQ_ARGS="start xbean:activemq.xml"
+<% end -%>

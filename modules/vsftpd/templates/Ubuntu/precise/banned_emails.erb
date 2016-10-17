@@ -1,0 +1,20 @@
+<% 
+  emails = []
+
+  if @vsftpd_banned_emails
+    if @vsftpd_banned_emails.kind_of?(Array)
+      emails = @vsftpd_banned_emails
+    else
+      if @vsftpd_banned_emails =~ /, /
+        emails = @vsftpd_banned_emails.split(', ')
+      elsif @vsftpd_banned_emails =~ /,/
+        emails = @vsftpd_banned_emails.split(',')
+      else
+        emails = @vsftpd_banned_emails.split
+      end
+    end
+  end
+-%>
+<% emails.each do |email| -%>
+<%= email %>
+<% end -%>

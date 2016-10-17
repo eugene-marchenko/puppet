@@ -1,0 +1,165 @@
+# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+
+
+# Debian specific:  Specifying a file name will cause the first
+# line of that file to be used as the name.  The Debian default
+# is /etc/mailname.
+#myorigin = /etc/mailname
+
+<% if @postfix_smtpd_banner -%>
+smtpd_banner = <%= @postfix_smtpd_banner %>
+<% else -%>
+smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
+<% end -%>
+<% if @postfix_biff -%>
+biff = <%= @postfix_biff %>
+<% else -%>
+biff = no
+<% end -%>
+
+# appending .domain is the MUA's job.
+<% if @postfix_append_dot_mydomain -%>
+append_dot_mydomain = <%= @postfix_append_dot_mydomain %>
+<% else -%>
+append_dot_mydomain = no
+<% end -%>
+
+# Uncomment the next line to generate "delayed mail" warnings
+<% if @postfix_delay_warning_time -%>
+delay_warning_time = <%= @postfix_delay_warning_time %>
+<% else -%>
+#delay_warning_time = 4h
+<% end -%>
+
+<% if @postfix_readme_directory -%>
+readme_directory = <%= @postfix_readme_directory %>
+<% else -%>
+readme_directory = no
+<% end -%>
+
+# SASL Support for Clients
+#
+# The following options set parameters needed by Postfix to enable
+# Cyrus-SASL support for authentication of mail clients
+#
+<% if @postfix_smtpd_sasl_auth_enable -%>
+smtpd_sasl_auth_enable = <%= @postfix_smtpd_sasl_auth_enable %>
+<% else -%>
+#smtpd_sasl_auth_enable = no
+<% end -%>
+<% if @postfix_smtpd_sasl_security_options -%>
+smtpd_sasl_security_options = <%= @postfix_smtpd_sasl_security_options %>
+<% else -%>
+#smtpd_sasl_security_options = noanonymous
+<% end -%>
+<% if @postfix_smtpd_sasl_local_domain -%>
+smtpd_sasl_local_domain = <%= @postfix_smtpd_sasl_local_domain %>
+<% else -%>
+#smtpd_sasl_local_domain = $mydomain
+<% end -%>
+<% if @postfix_smtpd_sasl_authenticated_header -%>
+smtpd_sasl_authenticated_header = <%= @postfix_smtpd_sasl_authenticated_header %>
+<% else -%>
+#smtpd_sasl_authenticated_header = yes
+<% end -%>
+<% if @postfix_smtpd_sasl_authenticated_header -%>
+smtpd_sasl_authenticated_header = <%= @postfix_smtpd_sasl_authenticated_header %>
+<% else -%>
+#smtpd_sasl_authenticated_header = yes
+<% end -%>
+<% if @postfix_broken_sasl_auth_clients -%>
+broken_sasl_auth_clients = <%= @postfix_broken_sasl_auth_clients %>
+<% else -%>
+#broken_sasl_auth_clients = no
+<% end -%>
+
+# TLS parameters
+<% if @postfix_smtpd_tls_cert_file -%>
+smtpd_tls_cert_file=<%= @postfix_smtpd_tls_cert_file %>
+<% else -%>
+smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+<% end -%>
+<% if @postfix_smtpd_tls_key_file -%>
+smtpd_tls_key_file=<%= @postfix_smtpd_tls_key_file %>
+<% else -%>
+smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+<% end -%>
+<% if @postfix_smtpd_use_tls -%>
+smtpd_use_tls=<%= @postfix_smtpd_use_tls %>
+<% else -%>
+smtpd_use_tls=yes
+<% end -%>
+<% if @postfix_smtpd_tls_session_cache_database -%>
+smtpd_tls_session_cache_database = <%= @postfix_smtpd_tls_session_cache_database %>
+<% else -%>
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+<% end -%>
+<% if @postfix_smtp_tls_session_cache_database -%>
+smtp_tls_session_cache_database = <%= @postfix_smtp_tls_session_cache_database %>
+<% else -%>
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+<% end -%>
+
+# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
+# information on enabling SSL in the smtp client.
+
+<% if @postfix_hostname -%>
+myhostname = <%= @postfix_hostname %>
+<% else -%>
+myhostname = <%= @hostname %>
+<% end -%>
+<% if @postfix_domain -%>
+mydomain = <%= @postfix_domain %>
+<% else -%>
+mydomain = <%= @domain %>
+<% end -%>
+<% if @postfix_alias_maps -%>
+alias_maps = <%= @postfix_alias_maps %>
+<% else -%>
+alias_maps = hash:/etc/aliases
+<% end -%>
+<% if @postfix_alias_database -%>
+alias_database = <%= @postfix_alias_database %>
+<% else -%>
+alias_database = hash:/etc/aliases
+<% end -%>
+<% if @postfix_myorigin -%>
+myorigin = <%= @postfix_myorigin %>
+<% else -%>
+myorigin = /etc/mailname
+<% end -%>
+<% if @postfix_mydestination -%>
+mydestination = <%= @postfix_mydestination %>, localhost.$mydomain, localhost
+<% else -%>
+mydestination = $myhostname.$mydomain, $myhostname, localhost.$mydomain, localhost
+<% end -%>
+<% if @postfix_relayhost -%>
+relayhost = <%= @postfix_relayhost %>
+<% else -%>
+relayhost =
+<% end -%>
+<% if @postfix_smtpd_recipient_restrictions -%>
+smtpd_recipient_restrictions = <%= @postfix_smtpd_recipient_restrictions %>
+<% else -%>
+#smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated
+<% end -%>
+<% if @postfix_mynetworks -%>
+mynetworks = <%= @postfix_mynetworks %> 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+<% else -%>
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+<% end -%>
+<% if @postfix_mailbox_size_limit -%>
+mailbox_size_limit = <%= @postfix_mailbox_size_limit %>
+<% else -%>
+mailbox_size_limit = 0
+<% end -%>
+<% if @postfix_recipient_delimiter -%>
+recipient_delimiter = <%= @postfix_recipient_delimiter %>
+<% else -%>
+recipient_delimiter = +
+<% end -%>
+<% if @postfix_inet_interfaces -%>
+inet_interfaces = <%= @postfix_inet_interfaces %>
+<% else -%>
+inet_interfaces = localhost
+<% end -%>

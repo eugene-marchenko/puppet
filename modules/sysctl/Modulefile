@@ -1,0 +1,10 @@
+name    'sysctl'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/sysctl'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages sysctl packages, services, configs for sysctloring various services'
+description 'Manages sysctl packages, services, configs for sysctloring various services'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

@@ -1,0 +1,18 @@
+{ "solr_custom_service" : { 
+    "solr" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "solr_custom_packages" : {
+    "solr" : {}
+  },
+  "solr_custom_configs" : {
+    "/etc/solr/solr.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

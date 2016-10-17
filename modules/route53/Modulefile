@@ -1,0 +1,10 @@
+name    'route53'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/route53'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages route53 resource records'
+description 'Registers a node's address and hostname with the appropriate route53 zone'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

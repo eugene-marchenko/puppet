@@ -1,0 +1,19 @@
+{ "custom_packages" : {
+    "perl" : {
+      "ensure" : "latest",
+      "provider" : "apt"
+    },
+    "libnet-amazon-ec2-perl" : { 
+      "ensure" : "latest",
+      "provider" : "apt"
+    },
+    "libio-string-perl" : { 
+      "ensure" : "uninstalled",
+      "provider" : "apt"
+    },
+    "libmailtools-perl" : { 
+      "ensure" : "present",
+      "provider" : "apt"
+    }
+  }
+}

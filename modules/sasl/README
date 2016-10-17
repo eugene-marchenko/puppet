@@ -1,0 +1,81 @@
+= PUPPET MODULE:
+  sasl
+
+== REQUIREMENTS:
+
+=== Platform and Application Environment:
+
+Tested on Ubuntu 12.04.
+
+== USAGE:
+
+# Simple default install
+
+class { 'sasl' : }
+include sasl
+
+# The AntiClass pattern
+
+class { 'sasl' : installed => false }
+
+# Installing sasl users
+
+# Simple install
+
+sasl::user { 'relay' : password => 'kn0ckkn0ck' }
+
+# With different dbfile
+
+sasl::user { 'relay' :
+  password  => 'kn0ckkn0ck',
+  dbfile    => '/var/spool/postfix/etc/sasldb',
+}
+
+# With a different domain
+
+sasl::user { 'relay' :
+  password  => 'kn0ckkn0ck',
+  mx_domain => 'relay.example.com',
+}
+
+# Remove a user
+
+sasl::user { 'relay' : ensure => false, password 'kn0ckkn0ck' }
+
+# Remove a user with a custom domain
+
+sasl::user { 'relay' :
+  ensure    => false,
+  password  => 'kn0ckkn0ck',
+  mx_domain => 'relay.example.com',
+}
+
+== CAVEATS:
+
+If postfix is installed, Class[sasl] will add the postfix user to the sasl
+group. It WILL NOT change the dbfile path in either the sasl::user define OR
+in the sasl_configs Hash in sasl::params. This is because postfix could be
+configured as NOT chrooted, even though on Debian systems is is by default.
+
+It will ONLY change the values in the sasl_configs Hash IF the postfix_chroot
+fact is available AND it will prepend those file paths with the VALUE of the
+postfix_chroot fact. The value of the dbfile parameter in sasl::user define
+will be prepended with the value of the postfix_chroot fact as well.
+
+May work on other platforms. Only tested on Ubuntu 12.04. Currently
+Ubuntu/Debian is only explicitly supported vi the params.pp. You can add other
+OS support via that class.
+
+== LICENSE:
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

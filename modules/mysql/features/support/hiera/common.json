@@ -1,0 +1,6 @@
+{ 
+  "mysql_custom_packages" : {
+    "mysql1" : {},
+    "mysql2" : {}
+  }
+}

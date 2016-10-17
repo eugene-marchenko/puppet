@@ -1,0 +1,10 @@
+name    'lvm2'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/lvm2'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages lvm2 packages, configs and services'
+description 'Manages lvm2 packages, configs and services'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

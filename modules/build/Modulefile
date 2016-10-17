@@ -1,0 +1,10 @@
+name    'build'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/build'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages build packages, both pip and apt'
+description 'Manages build packages, both pip and apt'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

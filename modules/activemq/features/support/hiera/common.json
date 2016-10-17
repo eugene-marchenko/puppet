@@ -1,0 +1,18 @@
+{ "activemq_custom_service" : { 
+    "activemq" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "activemq_custom_packages" : {
+    "activemq" : {}
+  },
+  "activemq_custom_configs" : {
+    "/etc/activemq/activemq.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

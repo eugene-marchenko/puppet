@@ -1,0 +1,9 @@
+name    'java'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/java'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages java packages, services, configs for java'
+description 'Manages java packages, services, configs for java'
+
+## Add dependencies, if any:

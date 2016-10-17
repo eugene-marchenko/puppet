@@ -1,0 +1,804 @@
+# Configuration file for varnish
+#
+# /etc/init.d/varnish expects the variables $DAEMON_OPTS, $NFILES and $MEMLOCK
+# to be set from this shell script fragment.
+#
+# Should we start varnishd at boot?  Set to "no" to disable.
+<% if @varnish_enabled =~ /false|no/ -%>
+START=no
+<% else -%>
+START=yes
+<% end -%>
+
+# Maximum number of open files (for ulimit -n)
+<% if @varnish_openfile_limit -%>
+NFILES=<%= @varnish_openfile_limit %>
+<% else -%>
+NFILES=131072
+<% end -%>
+
+# Maximum locked memory size (for ulimit -l)
+# Used for locking the shared memory log in memory.  If you increase log size,
+# you need to increase this number as well
+<% if @varnish_memlock_limit -%>
+MEMLOCK=<%= @varnish_memlock_limit %>
+<% else -%>
+MEMLOCK=82000
+<% end -%>
+
+# Default varnish instance name is the local nodename.  Can be overridden with
+# the -n switch, to have more instances on a single server.
+INSTANCE=<%= @hostname %>
+
+# See varnishd(1) for more information.
+#
+# Main configuration file.
+VCL_CONF=/etc/varnish/default.vcl
+#
+# Default address and port to bind to
+# Blank address means all IPv4 and IPv6 interfaces, otherwise specify
+# a host name, an IPv4 dotted quad, or an IPv6 address in brackets.
+<% if @varnish_listen_address -%>
+LISTEN_ADDRESS=<%= @varnish_listen_address -%>
+<% else -%>
+LISTEN_ADDRESS=
+<% end -%>
+#
+<%- if @cq5_env == "qa06" -%>
+LISTEN_PORT=80
+<% elsif @varnish_listen_port -%>
+LISTEN_PORT=<%= @varnish_listen_port %>
+<% else -%>
+LISTEN_PORT=6081
+<% end -%>
+#
+# Telnet admin interface listen address and port
+<% if @varnish_admin_listen_address -%>
+ADMIN_LISTEN_ADDRESS=<%= @varnish_admin_listen_address %>
+<% else -%>
+ADMIN_LISTEN_ADDRESS=127.0.0.1
+<% end -%>
+#
+<% if @varnish_admin_listen_port -%>
+ADMIN_LISTEN_PORT=<%= @varnish_admin_listen_port %>
+<% else -%>
+ADMIN_LISTEN_PORT=6082
+<% end -%>
+#
+# Cache file location
+<% if @varnish_storage_file -%>
+STORAGE_FILE=<%= @varnish_storage_file %>
+<% else -%>
+STORAGE_FILE=/var/lib/varnish/$INSTANCE/varnish_storage.bin
+<% end -%>
+#
+# Cache file size: in bytes, optionally using k / M / G / T suffix,
+# or in percentage of available disk space using the % suffix.
+<% if @varnish_storage_size -%>
+STORAGE_SIZE=<%= @varnish_storage_size %>
+<% else -%>
+STORAGE_SIZE=1G
+<% end -%>
+#
+# File containing administrative secret
+<% if @varnish_secret_file -%>
+SECRET_FILE=<%= @varnish_secret_file %>
+<% else -%>
+SECRET_FILE=/etc/varnish/secret
+<% end -%>
+#
+# Backend storage specification
+# STORAGE="file,${STORAGE_FILE},${STORAGE_SIZE}"
+STORAGE="malloc,${STORAGE_SIZE}"
+#
+# Auto Restart: Auto restart the child process if it dies. Default on.
+# Units: bool
+<% if @varnish_auto_restart -%>
+AUTO_RESTART=<%= @varnish_auto_restart -%>
+<% else -%>
+AUTO_RESTART=on
+<% end -%>
+#
+# Ban Dups: Detect and eliminate duplicate bans. Default on.
+# Units: bool
+<% if @varnish_ban_dups -%>
+BAN_DUPS=<%= @varnish_ban_dups -%>
+<% else -%>
+BAN_DUPS=on
+<% end -%>
+#
+# Ban Lurker Sleep: How long time does the ban lurker thread sleeps between
+# successful attempts to push the last item up the ban list. It always sleeps
+# a second when nothing can be done. A value of zero disables the ban lurker.
+# Units: seconds
+<% if @varnish_ban_lurker_sleep -%>
+BAN_LURKER_SLEEP=<%= @varnish_ban_lurker_sleep -%>
+<% else -%>
+BAN_LURKER_SLEEP=0.01
+<% end -%>
+#
+# Between Bytes Timeout: Default timeout between bytes when receiving data
+# from backend. We only wait for this many seconds between bytes before
+# giving up. A value of 0 means it will never time out
+# Units: seconds
+<% if @varnish_between_bytes_timeout -%>
+BETWEEN_BYTES_TIMEOUT=<%= @varnish_between_bytes_timeout -%>
+<% else -%>
+BETWEEN_BYTES_TIMEOUT=60
+<% end -%>
+# 
+# CLI Buffer: Size of buffer for CLI input. You may need to increase this if
+# you have big VCL files and use the vcl.inline CLI command
+# Units: bytes
+<% if @varnish_cli_buffer -%>
+CLI_BUFFER=<%= @varnish_cli_buffer -%>
+<% else -%>
+CLI_BUFFER=8192
+<% end -%>
+#
+# CLI Timeout: Timeout for the childs replies to CLI requests from the master
+# Units: seconds
+<% if @varnish_cli_timeout -%>
+CLI_TIMEOUT=<%= @varnish_cli_timeout -%>
+<% else -%>
+CLI_TIMEOUT=10
+<% end -%>
+#
+# Clock Skew: How much clockskew we are willing to accept between the backend
+# and our own clock
+# Units: seconds
+<% if @varnish_clock_skew -%>
+CLOCK_SKEW=<%= @varnish_clock_skew -%>
+<% else -%>
+CLOCK_SKEW=10
+<% end -%>
+#
+# Connect Timeout: Default connection timeout for backend connections. We
+# only try to connect to the backend for this many seconds before giving up
+# Units: seconds
+<% if @varnish_connect_timeout -%>
+CONNECT_TIMEOUT=<%= @varnish_connect_timeout -%>
+<% else -%>
+CONNECT_TIMEOUT=0.7
+<% end -%>
+#
+# Critbit cooloff: How long time the critbit hasher keeps deleted objheads on
+# the cooloff list
+# Units: seconds
+<% if @varnish_critbit_cooloff -%>
+CRITBIT_COOLOFF=<%= @varnish_critbit_cooloff -%>
+<% else -%>
+CRITBIT_COOLOFF=180.0
+<% end -%>
+#
+# Default grace: Default grace period. We will deliver an object this long
+# after it has expired, provided another thread is attempting to get a new copy
+# Units: seconds
+<% if @varnish_default_grace -%>
+DEFAULT_GRACE=<%= @varnish_default_grace -%>
+<% else -%>
+DEFAULT_GRACE=10
+<% end -%>
+#
+# Default keep: Default keep period. We will keep a useless object around this
+# long, making it available for conditional backend fetches. That means that the
+# object will be removed from the cache at the end of ttl+grace+keep
+# Units: seconds
+<% if @varnish_default_keep -%>
+DEFAULT_KEEP=<%= @varnish_default_keep -%>
+<% else -%>
+DEFAULT_KEEP=0
+<% end -%>
+#
+# Default TTL used when the backend does not specify one
+# Units: seconds
+<% if @varnish_default_ttl -%>
+DEFAULT_TTL=<%= @varnish_default_ttl %>
+<% else -%>
+DEFAULT_TTL=120
+<% end -%>
+#
+# Diagnostic Bitmap controlling diagnostics code:
+# 0x00000001 - CNT_Session states.
+# 0x00000002 - workspace debugging.
+# 0x00000004 - kqueue debugging.
+# 0x00000008 - mutex logging.
+# 0x00000010 - mutex contests.
+# 0x00000020 - waiting list.
+# 0x00000040 - object workspace.
+# 0x00001000 - do not core-dump child process.
+# 0x00002000 - only short panic message.
+# 0x00004000 - panic to stderr.
+# 0x00010000 - synchronize shmlog.
+# 0x00020000 - synchronous start of persistence.
+# 0x00040000 - release VCL early.
+# 0x80000000 - do edge-detection on digest.
+# Units: bitmap
+<% if @varnish_diag_bitmap -%>
+DIAG_BITMAP=<%= @varnish_diag_bitmap %>
+<% else -%>
+DIAG_BITMAP=0
+<% end -%>
+#
+# ESI Bitmap controlling ESI parsing code:
+# 0x00000001 - Don't check if it looks like XML
+# 0x00000002 - Ignore non-esi elements
+# 0x00000004 - Emit parsing debug records
+# 0x00000008 - Force-split parser input (debugging)
+# Units: bitmap
+<% if @varnish_esi_syntax -%>
+ESI_SYNTAX=<%= @varnish_esi_syntax %>
+<% else -%>
+ESI_SYNTAX=0
+<% end -%>
+#
+# Expiry sleep: How long the expiry thread sleeps when there is nothing for it
+# to do
+# Units: seconds
+<% if @varnish_expiry_sleep -%>
+EXPIRY_SLEEP=<%= @varnish_expiry_sleep %>
+<% else -%>
+EXPIRY_SLEEP=1
+<% end -%>
+#
+# Fetch chunksize: The default chunksize used by fetcher. This should be bigger
+# than the majority of objects with short TTLs. Internal limits in the
+# storage_file module makes increases above 128kb a dubious idea
+# Units: kilobytes
+<% if @varnish_fetch_chunksize -%>
+FETCH_CHUNKSIZE=<%= @varnish_fetch_chunksize %>
+<% else -%>
+FETCH_CHUNKSIZE=128
+<% end -%>
+#
+# Fetch maxchunksize: The maximum chunksize we attempt to allocate from storage.
+# Making this too large may cause delays and storage fragmentation
+# Units: kilobytes
+<% if @varnish_fetch_maxchunksize -%>
+FETCH_MAXCHUNKSIZE=<%= @varnish_fetch_maxchunksize %>
+<% else -%>
+FETCH_MAXCHUNKSIZE=262144
+<% end -%>
+#
+# First byte timeout: Default timeout for receiving first byte from backend.
+# We only wait for this many seconds for the first byte before giving up. A
+# value of 0 means it will never time out
+# Units: seconds
+<% if @varnish_first_byte_timeout -%>
+FIRST_BYTE_TIMEOUT=<%= @varnish_first_byte_timeout %>
+<% else -%>
+FIRST_BYTE_TIMEOUT=60
+<% end -%>
+#
+# Gzip compression level: 0=debug, 1=fast, 9=best
+<% if @varnish_gzip_level -%>
+GZIP_LEVEL=<%= @varnish_gzip_level %>
+<% else -%>
+GZIP_LEVEL=6
+<% end -%>
+#
+# Gzip memlevel: Gzip memory level 1=slow/least, 9=fast/most compression. Memory
+# impact is 1=1k, 2=2k, ... 9=256k
+<% if @varnish_gzip_memlevel -%>
+GZIP_MEMLEVEL=<%= @varnish_gzip_memlevel %>
+<% else -%>
+GZIP_MEMLEVEL=8
+<% end -%>
+#
+# Gzip stack buffer: Size of stack buffer used for gzip processing. The stack
+# buffers are used for in-transit data, for instance gunzip'ed data being sent
+# to a client.Making this space to small results in more overhead, writes to
+# sockets etc, making it too big is probably just a waste of memory.
+# Units: bytes
+<% if @varnish_gzip_stack_buffer -%>
+GZIP_STACK_BUFFER=<%= @varnish_gzip_stack_buffer %>
+<% else -%>
+GZIP_STACK_BUFFER=32768
+<% end -%>
+#
+# Gzip tmp space, where temporary space for gzip/gunzip is allocated:
+# 0 - malloc
+# 1 - session workspace
+# 2 - thread workspace
+<% if @varnish_gzip_tmp_space -%>
+GZIP_TMP_SPACE=<%= @varnish_gzip_tmp_space %>
+<% else -%>
+GZIP_TMP_SPACE=0
+<% end -%>
+#
+# Gzip window size 8=least, 15=most compression. Memory impact is 8=1k, 9=2k,
+# ... 15=128k.
+<% if @varnish_gzip_window -%>
+GZIP_WINDOW=<%= @varnish_gzip_window %>
+<% else -%>
+GZIP_WINDOW=15
+<% end -%>
+#
+# HTTP Gzip support: Enable gzip support. When enabled Varnish will compress
+# uncompressed objects before they are stored in the cache. If a client does
+# not support gzip encoding Varnish will uncompress compressed objects on demand
+# Units: bool
+<% if @varnish_http_gzip_support -%>
+HTTP_GZIP_SUPPORT=<%= @varnish_http_gzip_support %>
+<% else -%>
+HTTP_GZIP_SUPPORT=on
+<% end -%>
+#
+# HTTP Max Headers: Maximum number of HTTP headers we will deal with in client
+# request or backend reponses. Note that the first line occupies five header
+# fields
+# Units: header lines
+<% if @varnish_http_max_hdr -%>
+HTTP_MAX_HDR=<%= @varnish_http_max_hdr %>
+<% else -%>
+HTTP_MAX_HDR=64
+<% end -%>
+#
+# HTTP Range Support: Enable support for HTTP Range headers
+# Units: bool
+<% if @varnish_http_range_support -%>
+HTTP_RANGE_SUPPORT=<%= @varnish_http_range_support %>
+<% else -%>
+HTTP_RANGE_SUPPORT=on
+<% end -%>
+#
+# HTTP Request Header Length: Maximum length of any HTTP client request header
+# we will allow
+# Units: bytes
+<% if @varnish_http_req_hdr_len -%>
+HTTP_REQ_HDR_LEN=<%= @varnish_http_req_hdr_len %>
+<% else -%>
+HTTP_REQ_HDR_LEN=8192
+<% end -%>
+# 
+# HTTP Request Size: Maximum number of bytes of HTTP client request we will
+# deal with
+# Units: bytes
+<% if @varnish_http_req_size -%>
+HTTP_REQ_SIZE=<%= @varnish_http_req_size %>
+<% else -%>
+HTTP_REQ_SIZE=32768
+<% end -%>
+#
+# HTTP Response Header Length: Maximum length of any HTTP backend response
+# header we will allow
+# Units: bytes
+<% if @varnish_http_resp_hdr_len -%>
+HTTP_RESP_HDR_LEN=<%= @varnish_http_resp_hdr_len %>
+<% else -%>
+HTTP_RESP_HDR_LEN=8192
+<% end -%>
+# 
+# HTTP Response Size: Maximum number of bytes of HTTP backend response we will
+# deal with
+# Units: bytes
+<% if @varnish_http_resp_size -%>
+HTTP_RESP_SIZE=<%= @varnish_http_resp_size %>
+<% else -%>
+HTTP_RESP_SIZE=32768
+<% end -%>
+#
+# Listen Depth: how many outstanding connections are allowed to be queued
+# before the kernel starts dropping them.
+# Units: connections
+<% if @varnish_listen_depth -%>
+LISTEN_DEPTH=<%= @varnish_listen_depth %>
+<% else -%>
+LISTEN_DEPTH=1024
+<% end -%>
+#
+# Log Hashstring: Log the hash string components to shared memory log
+# Units: bool
+<% if @varnish_log_hashstring -%>
+LOG_HASHSTRING=<%= @varnish_log_hashstring %>
+<% else -%>
+LOG_HASHSTRING=on
+<% end -%>
+#
+# Log local address: Log the local address on the TCP connection in the
+# SessionOpen shared memory record
+# Units: bool
+<% if @varnish_log_local_address -%>
+LOG_LOCAL_ADDRESS=<%= @varnish_log_local_address %>
+<% else -%>
+LOG_LOCAL_ADDRESS=off
+<% end -%>
+#
+# LRU Interval: Grace period before object moves on LRU list
+# Units: seconds
+<% if @varnish_lru_interval -%>
+LRU_INTERVAL=<%= @varnish_lru_interval %>
+<% else -%>
+LRU_INTERVAL=2
+<% end -%>
+#
+# Max ESI Depth: Maximum depth of esi:include processing
+# Units: levels
+<% if @varnish_max_esi_depth -%>
+MAX_ESI_DEPTH=<%= @varnish_max_esi_depth %>
+<% else -%>
+MAX_ESI_DEPTH=5
+<% end -%>
+#
+# Max Restarts: Upper limit on how many times a request can restart. Be aware
+# that restarts are likely to cause a hit against the backend, so don't
+# increase thoughtlessly
+# Units: restarts
+<% if @varnish_max_restarts -%>
+MAX_RESTARTS=<%= @varnish_max_restarts %>
+<% else -%>
+MAX_RESTARTS=4
+<% end -%>
+#
+# Nuke Limit: Maximum number of objects we attempt to nuke in orderto make space
+# for a object body
+# Units: allocations
+<% if @varnish_nuke_limit -%>
+NUKE_LIMIT=<%= @varnish_nuke_limit %>
+<% else -%>
+NUKE_LIMIT=50
+<% end -%>
+#
+# Ping interval: Interval between pings from parent to child. Zero will disable
+# pinging entirely, which makes it possible to attach a debugger to the child
+# Units: seconds
+<% if @varnish_ping_interval -%>
+PING_INTERVAL=<%= @varnish_ping_interval %>
+<% else -%>
+PING_INTERVAL=3
+<% end -%>
+#
+# Pipe timeout: Idle timeout for PIPE sessions. If nothing have been received
+# in either direction for this many seconds, the session is closed
+# Units: seconds
+<% if @varnish_pipe_timeout -%>
+PIPE_TIMEOUT=<%= @varnish_pipe_timeout %>
+<% else -%>
+PIPE_TIMEOUT=60
+<% end -%>
+#
+# Prefer ipv6: Prefer IPv6 address when connecting to backends which have both
+# IPv4 and IPv6 addresses
+# Units: bool
+<% if @varnish_prefer_ipv6 -%>
+PREFER_IPV6=<%= @varnish_prefer_ipv6 %>
+<% else -%>
+PREFER_IPV6=off
+<% end -%>
+#
+# Queue Max: Percentage permitted queue length. This sets the ratio of queued
+# requests to worker threads, above which sessions will be dropped instead of
+# queued
+# Units: %
+<% if @varnish_queue_max -%>
+QUEUE_MAX=<%= @varnish_queue_max %>
+<% else -%>
+QUEUE_MAX=100
+<% end -%>
+#
+# Rush exponent: How many parked request we start for each completed requeston
+# the object. NB: Even with the implict delay of delivery, this parameter
+# controls an exponential increase in number of worker threads
+# Units: requests per second
+<% if @varnish_rush_exponent -%>
+RUSH_EXPONENT=<%= @varnish_rush_exponent %>
+<% else -%>
+RUSH_EXPONENT=3
+<% end -%>
+#
+# Saintmode threshold: The maximum number of objects held off by saint mode
+# before no further will be made to the backend until one times out. A value of
+# 0 disables saintmode
+# Units: objects
+<% if @varnish_saintmode_threshold -%>
+SAINTMODE_THRESHOLD=<%= @varnish_saintmode_threshold %>
+<% else -%>
+SAINTMODE_THRESHOLD=10
+<% end -%>
+#
+# Send timeout: Send timeout for client connections. If the HTTP response hasn't
+# been transmitted in this many seconds the session is closed
+# Units: seconds
+<% if @varnish_send_timeout -%>
+SEND_TIMEOUT=<%= @varnish_send_timeout %>
+<% else -%>
+SEND_TIMEOUT=60
+<% end -%>
+#
+# Session Timeout: Idle timeout for persistent sessions. If a HTTP request has
+# not been received in this many seconds, the session is closed
+# Units: seconds
+<% if @varnish_sess_timeout -%>
+SESS_TIMEOUT=<%= @varnish_sess_timeout %>
+<% else -%>
+SESS_TIMEOUT=5
+<% end -%>
+# 
+# Session Workspace: The amount of bytes allocated to each thread, session
+# and object. This space must be big enough for the entire HTTP protocol header
+# and any edits done to it in the VCL code
+# Units: bytes
+<% if @varnish_sess_workspace -%>
+SESS_WORKSPACE=<%= @varnish_sess_workspace %>
+<% else -%>
+SESS_WORKSPACE=65536
+<% end -%>
+#
+# Session Linger: How long time the workerthread lingers on the session to see
+# if a new request appears right away. If sessions are reused, as much as half
+# of all reuses happen within the first 100 msec of the previous request
+# completing. Setting this too high results in worker threads not doing anything
+# for their keep, setting it too low just means that more sessions take a detour
+# around the waiter
+# Units: ms
+<% if @varnish_session_linger -%>
+SESSION_LINGER=<%= @varnish_session_linger %>
+<% else -%>
+SESSION_LINGER=50
+<% end -%>
+#
+# Session Max: Maximum number of sessions we will allocate before just dropping
+# connections. This is mostly an anti-DoS measure, and setting it plenty high
+# should not hurt, as long as you have the memory for it
+# Units: sessions
+<% if @varnish_session_max -%>
+SESSION_MAX=<%= @varnish_session_max %>
+<% else -%>
+SESSION_MAX=100000
+<% end -%>
+#
+# SHM Log Size: Maximum number of bytes in SHM log record. Maximum is 65535 bytes 
+# Units: bytes
+<% if @varnish_shm_reclen -%>
+SHM_RECLEN=<%= @varnish_shm_reclen %>
+<% else -%>
+SHM_RECLEN=255
+<% end -%>
+#
+# Shared Memory Workspace: Bytes of shmlog workspace allocated for worker
+# threads. If too big, it wastes some ram, if too small it causes needless
+# flushes of the SHM workspace. Minimum is 4096 bytes
+# Units: bytes
+<% if @varnish_shm_workspace -%>
+SHM_WORKSPACE=<%= @varnish_shm_workspace %>
+<% else -%>
+SHM_WORKSPACE=8192
+<% end -%>
+#
+# Shortlived: Objects created with TTL shorter than this are always put in
+# transient storage
+# Units: seconds
+<% if @varnish_shortlived -%>
+SHORTLIVED=<%= @varnish_shortlived %>
+<% else -%>
+SHORTLIVED=10.0
+<% end -%>
+#
+# Syslog cli traffic: Log all CLI traffic to syslog(LOG_INFO)
+# Units: bool
+<% if @varnish_syslog_cli_traffic -%>
+SYSLOG_CLI_TRAFFIC=<%= @varnish_syslog_cli_traffic %>
+<% else -%>
+SYSLOG_CLI_TRAFFIC=on
+<% end -%>
+#
+# Thread pool add delay: Wait at least this long between creating threads.
+# Setting this too long results in insuffient worker threads. Setting this too
+# short increases the risk of worker thread pile-up.
+# Units: milliseconds
+<% if @varnish_thread_pool_add_delay -%>
+THREAD_POOL_ADD_DELAY=<%= @varnish_thread_pool_add_delay %>
+<% else -%>
+THREAD_POOL_ADD_DELAY=2
+<% end -%>
+#
+# Thread pool add threshold: Overflow threshold for worker thread creation.
+# Setting this too low, will result in excess worker threads, which is generally
+# a bad idea. Setting it too high results in insuffient worker threads
+# Units: requests
+<% if @varnish_thread_pool_add_threshold -%>
+THREAD_POOL_ADD_THRESHOLD=<%= @varnish_thread_pool_add_threshold %>
+<% else -%>
+THREAD_POOL_ADD_THRESHOLD=2
+<% end -%>
+#
+# Thread pool fail delay: Wait at least this long after a failed thread creation
+# before trying to create another thread. Failure to create a worker thread is
+# often a sign that the end is near, because the process is running out of RAM
+# resources for thread stacks. This delay tries to not rush it on needlessly. If
+# thread creation failures are a problem, check that thread_pool_max is not too
+# high. It may also help to increase thread_pool_timeout and thread_pool_min, to
+# reduce the rate at which treads are destroyed and later recreated
+# Units: milliseconds
+<% if @varnish_thread_pool_fail_delay -%>
+THREAD_POOL_FAIL_DELAY=<%= @varnish_thread_pool_fail_delay %>
+<% else -%>
+THREAD_POOL_FAIL_DELAY=200
+<% end -%>
+#
+# Thread pool max: The maximum number of worker threads in each pool. Do not set
+# this higher than you have to, since excess worker threads soak up RAM and CPU
+# and generally just get in the way of getting work done
+# Units: threads
+<% if @varnish_thread_pool_max -%>
+THREAD_POOL_MAX=<%= @varnish_thread_pool_max %>
+<% else -%>
+THREAD_POOL_MAX=500
+<% end -%>
+#
+# Thread pool min: The minimum number of worker threads in each pool. Increasing
+# this may help ramp up faster from low load situations where threads have
+# expired
+# Units: threads
+<% if @varnish_thread_pool_min -%>
+THREAD_POOL_MIN=<%= @varnish_thread_pool_min %>
+<% else -%>
+THREAD_POOL_MIN=5
+<% end -%>
+#
+# Thread pool purge delay: Wait this long between purging threads. This controls
+# the decay of thread pools when idle
+# Units: milliseconds
+<% if @varnish_thread_pool_purge_delay -%>
+THREAD_POOL_PURGE_DELAY=<%= @varnish_thread_pool_purge_delay %>
+<% else -%>
+THREAD_POOL_PURGE_DELAY=1000
+<% end -%>
+#
+# Thread pool stack: Worker thread stack size. On 32bit systems you may need to
+# tweak this down to fit many threads into the limited address space
+# Units: bytes
+<% if @varnish_thread_pool_stack -%>
+THREAD_POOL_STACK=<%= @varnish_thread_pool_stack %>
+<% else -%>
+THREAD_POOL_STACK=-1
+<% end -%>
+#
+# Thread Pool timeout: Thread idle threshold. Threads in excess of
+# thread_pool_min, which have been idle for at least this long are candidates
+# for purging
+# Units: seconds
+<% if @varnish_thread_pool_timeout -%>
+THREAD_POOL_TIMEOUT=<%= @varnish_thread_pool_timeout %>
+<% else -%>
+THREAD_POOL_TIMEOUT=300
+<% end -%>
+#
+# Thread Pool workspace: Bytes of HTTP protocol workspace allocated for worker
+# threads. This space must be big enough for the backend request and responses,
+# and response to the client plus any other memory needs in the VCL code
+# Units: bytes
+<% if @varnish_thread_pool_workspace -%>
+THREAD_POOL_WORKSPACE=<%= @varnish_thread_pool_workspace %>
+<% else -%>
+THREAD_POOL_WORKSPACE=65536
+<% end -%>
+#
+# Thread pools: Number of worker thread pools. Increasing number of worker pools
+# decreases lock contention. Too many pools waste CPU and RAM resources, and
+# more than one pool for each CPU is probably detrimal to performance. Can be
+# increased on the fly, but decreases require a restart to take effect
+# Units: pools
+<% if @varnish_thread_pools -%>
+THREAD_POOLS=<%= @varnish_thread_pools %>
+<% else -%>
+THREAD_POOLS=2
+<% end -%>
+#
+# Threads stats rate: Worker threads accumulate statistics, and dump these into
+# the global stats counters if the lock is free when they finish a request. This
+# parameters defines the maximum number of requests a worker thread may handle,
+# before it is forced to dump its accumulated stats into the global counters
+# Units: requests
+<% if @varnish_thread_stats_rate -%>
+THREAD_STATS_RATE=<%= @varnish_thread_stats_rate %>
+<% else -%>
+THREAD_STATS_RATE=10
+<% end -%>
+#
+# VCC Error Unref: Unreferenced VCL objects result in error
+# Units: bool
+<% if @varnish_vcc_err_unref -%>
+VCC_ERR_UNREF=<%= @varnish_vcc_err_unref %>
+<% else -%>
+VCC_ERR_UNREF=on
+<% end -%>
+#
+# VCL Dir: Directory from which relative VCL filenames (vcl.load and include)
+# are opened
+<% if @varnish_vcl_dir -%>
+VCL_DIR=<%= @varnish_vcl_dir %>
+<% else -%>
+VCL_DIR=/etc/varnish
+<% end -%>
+#
+# VCL Trace: Trace VCL execution in the shmlog. Enabling this will allow you to
+# see the path each request has taken through the VCL program. This generates a
+# lot of logrecords so it is off by default
+# Units: bool
+<% if @varnish_vcl_trace -%>
+VCL_TRACE=<%= @varnish_vcl_trace %>
+<% else -%>
+VCL_TRACE=off
+<% end -%>
+#
+# Vmod Dir: Directory where VCL modules are to be found
+<% if @varnish_vmod_dir -%>
+VMOD_DIR=<%= @varnish_vmod_dir %>
+<% else -%>
+VMOD_DIR=/usr/lib/varnish/vmods
+<% end -%>
+#
+# DAEMON_OPTS is used by the init script.  If you add or remove options, make
+# sure you update this section, too.
+#
+DAEMON_OPTS="-a ${LISTEN_ADDRESS}:${LISTEN_PORT} \
+              -f ${VCL_CONF} \
+              -T ${ADMIN_LISTEN_ADDRESS}:${ADMIN_LISTEN_PORT} \
+              -t ${DEFAULT_TTL} \
+              -w ${THREAD_POOL_MIN},${THREAD_POOL_MAX},${THREAD_POOL_TIMEOUT} \
+              -S ${SECRET_FILE} \
+              -s ${STORAGE} \
+              -p auto_restart=${AUTO_RESTART} \
+              -p ban_dups=${BAN_DUPS} \
+              -p ban_lurker_sleep=${BAN_LURKER_SLEEP} \
+              -p between_bytes_timeout=${BETWEEN_BYTES_TIMEOUT} \
+              -p cli_buffer=${CLI_BUFFER} \
+              -p cli_timeout=${CLI_TIMEOUT} \
+              -p clock_skew=${CLOCK_SKEW} \
+              -p connect_timeout=${CONNECT_TIMEOUT} \
+              -p critbit_cooloff=${CRITBIT_COOLOFF} \
+              -p default_grace=${DEFAULT_GRACE} \
+              -p default_keep=${DEFAULT_KEEP} \
+              -p diag_bitmap=${DIAG_BITMAP} \
+              -p esi_syntax=${ESI_SYNTAX} \
+              -p expiry_sleep=${EXPIRY_SLEEP} \
+              -p fetch_chunksize=${FETCH_CHUNKSIZE} \
+              -p fetch_maxchunksize=${FETCH_MAXCHUNKSIZE} \
+              -p first_byte_timeout=${FIRST_BYTE_TIMEOUT} \
+              -p gzip_level=${GZIP_LEVEL} \
+              -p gzip_memlevel=${GZIP_MEMLEVEL} \
+              -p gzip_stack_buffer=${GZIP_STACK_BUFFER} \
+              -p gzip_tmp_space=${GZIP_TMP_SPACE} \
+              -p gzip_window=${GZIP_WINDOW} \
+              -p http_gzip_support=${HTTP_GZIP_SUPPORT} \
+              -p http_max_hdr=${HTTP_MAX_HDR} \
+              -p http_range_support=${HTTP_RANGE_SUPPORT} \
+              -p http_req_hdr_len=${HTTP_REQ_HDR_LEN} \
+              -p http_req_size=${HTTP_REQ_SIZE} \
+              -p http_resp_hdr_len=${HTTP_RESP_HDR_LEN} \
+              -p http_resp_size=${HTTP_RESP_SIZE} \
+              -p listen_depth=${LISTEN_DEPTH} \
+              -p log_hashstring=${LOG_HASHSTRING} \
+              -p log_local_address=${LOG_LOCAL_ADDRESS} \
+              -p lru_interval=${LRU_INTERVAL} \
+              -p max_esi_depth=${MAX_ESI_DEPTH} \
+              -p max_restarts=${MAX_RESTARTS} \
+              -p nuke_limit=${NUKE_LIMIT} \
+              -p ping_interval=${PING_INTERVAL} \
+              -p pipe_timeout=${PIPE_TIMEOUT} \
+              -p prefer_ipv6=${PREFER_IPV6} \
+              -p queue_max=${QUEUE_MAX} \
+              -p rush_exponent=${RUSH_EXPONENT} \
+              -p saintmode_threshold=${SAINTMODE_THRESHOLD} \
+              -p send_timeout=${SEND_TIMEOUT} \
+              -p sess_timeout=${SESS_TIMEOUT} \
+              -p sess_workspace=${SESS_WORKSPACE} \
+              -p session_linger=${SESSION_LINGER} \
+              -p session_max=${SESSION_MAX} \
+              -p shm_reclen=${SHM_RECLEN} \
+              -p shm_workspace=${SHM_WORKSPACE} \
+              -p shortlived=${SHORTLIVED} \
+              -p syslog_cli_traffic=${SYSLOG_CLI_TRAFFIC} \
+              -p thread_pool_add_delay=${THREAD_POOL_ADD_DELAY} \
+              -p thread_pool_add_threshold=${THREAD_POOL_ADD_THRESHOLD} \
+              -p thread_pool_fail_delay=${THREAD_POOL_FAIL_DELAY} \
+              -p thread_pool_purge_delay=${THREAD_POOL_PURGE_DELAY} \
+              -p thread_pool_stack=${THREAD_POOL_STACK} \
+              -p thread_pool_workspace=${THREAD_POOL_WORKSPACE} \
+              -p thread_pools=${THREAD_POOLS} \
+              -p thread_stats_rate=${THREAD_STATS_RATE} \
+              -p vcc_err_unref=${VCC_ERR_UNREF} \
+              -p vcl_dir=${VCL_DIR} \
+              -p vcl_trace=${VCL_TRACE} \
+              -p vmod_dir=${VMOD_DIR}"

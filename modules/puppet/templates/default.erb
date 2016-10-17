@@ -1,0 +1,19 @@
+# Defaults for puppet - sourced by /etc/init.d/puppet
+
+# Start puppet on boot?
+<% if scope.lookupvar('::puppet_start') != :undefined -%>
+START="<%= scope.lookupvar('::puppet_start') %>"
+<% elsif scope.lookupvar('puppet_start') != :undefined -%>
+START="<%= scope.lookupvar('puppet_start') %>"
+<% else -%>
+START=yes
+<% end -%>
+
+# Startup options
+<% if scope.lookupvar('::puppet_daemon_opts') != :undefined -%>
+DAEMON_OPTS="<%= scope.lookupvar('::puppet_daemon_opts') %>"
+<% elsif scope.lookupvar('puppet_daemon_opts') != :undefined -%>
+DAEMON_OPTS="<%= scope.lookupvar('puppet_daemon_opts') %>"
+<% else -%>
+DAEMON_OPTS=""
+<% end -%>

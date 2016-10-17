@@ -1,0 +1,104 @@
+# Defaults for jetty see /etc/init.d/jetty for more
+
+# change to 0 to allow Jetty to start
+<% if @jetty_enabled =~ /false|no/ -%>
+NO_START=1
+<% else -%>
+NO_START=0
+<% end -%>
+
+# change to 'no' or uncomment to use the default setting in /etc/default/rcS 
+<% if @jetty_verbose =~ /false|no/ -%>
+VERBOSE=no
+<% else -%>
+VERBOSE=yes
+<% end -%>
+
+# Run Jetty as this user ID (default: jetty)
+# Set this to an empty string to prevent Jetty from starting automatically
+<% if @jetty_user -%>
+JETTY_USER=<%= @jetty_user %>
+<% else -%>
+#JETTY_USER=jetty
+<% end -%>
+
+# Listen to connections from this network host
+# Use 0.0.0.0 as host to accept all connections.
+# Uncomment to restrict access to localhost
+<% if @jetty_listen_address -%>
+JETTY_HOST=<%= @jetty_listen_address %>
+<% else -%>
+#JETTY_HOST=$(uname -n)
+<% end -%>
+
+# The network port used by Jetty
+<% if @jetty_listen_port -%>
+JETTY_PORT=<%= @jetty_listen_port %>
+<% else -%>
+#JETTY_PORT=8080
+<% end -%>
+
+# Timeout in seconds for the shutdown of all webapps
+<% if @jetty_shutdown_timeout -%>
+JETTY_SHUTDOWN=<%= @jetty_shutdown_timeout %>
+<% else -%>
+#JETTY_SHUTDOWN=30
+<% end -%>
+
+# Additional arguments to pass to Jetty    
+<% if @jetty_args -%>
+JETTY_ARGS="<%= @jetty_args -%>"
+<% else -%>
+#JETTY_ARGS=
+<% end -%>
+
+# Extra options to pass to the JVM         
+<% if @jetty_java_options -%>
+JAVA_OPTIONS="<%= @jetty_java_options %>"
+<% else -%>
+#JAVA_OPTIONS="-Xmx256m -Djava.awt.headless=true"
+<% end -%>
+
+# Home of Java installation.
+<% if @jetty_java_home -%>
+JAVA_HOME=<%= @jetty_java_home %>
+<% else -%>
+#JAVA_HOME=
+<% end -%>
+
+# The first existing directory is used for JAVA_HOME (if JAVA_HOME is not
+# defined in /etc/default/jetty). Should contain a list of space separated directories.
+<% if @jetty_jdk_dirs -%>
+JDK_DIRS="<%= @jetty_jdk_dirs %>"
+<% else -%>
+#JDK_DIRS="/usr/lib/jvm/default-java /usr/lib/jvm/java-6-sun"
+<% end -%>
+
+# Java compiler to use for translating JavaServer Pages (JSPs). You can use all
+# compilers that are accepted by Ant's build.compiler property.
+<% if @jetty_jsp_compiler -%>
+JSP_COMPILER=<%= @jetty_jsp_compiler %>
+<% else -%>
+#JSP_COMPILER=jikes
+<% end -%>
+
+# Jetty uses a directory to store temporary files like unpacked webapps
+<% if @jetty_tmp -%>
+JETTY_TMP=<%= @jetty_tmp %>
+<% else -%>
+#JETTY_TMP=/var/cache/jetty
+<% end -%>
+
+# Jetty uses a config file to setup its boot classpath
+<% if @jetty_start_config -%>
+JETTY_START_CONFIG=<%= @jetty_start_config %>
+<% else -%>
+#JETTY_START_CONFIG=/etc/jetty/start.config
+<% end -%>
+
+# Default for number of days to keep old log files in /var/log/jetty/
+<% if @jetty_logfile_keep_days -%>
+LOGFILE_DAYS=<%= @jetty_logfile_keep_days %>
+<% else -%>
+#LOGFILE_DAYS=14
+<% end -%>

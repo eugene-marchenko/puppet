@@ -1,0 +1,10 @@
+name    'varnish'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/varnish'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages varnish packages, services, configs for varnish'
+description 'Manages varnish packages, services, configs for varnish'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

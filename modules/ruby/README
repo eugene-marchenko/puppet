@@ -1,0 +1,60 @@
+= PUPPET MODULE:
+  ruby
+
+== REQUIREMENTS:
+
+=== Platform and Application Environment:
+
+Tested on Ubuntu 12.04. May work on other platforms, esp Ubuntu/Debian.
+
+== USAGE:
+
+# Simple default install
+
+class { 'ruby' : }
+include ruby
+
+# Use external data for gem packages
+
+class { 'ruby' : packages => hiera('some_other_packages') }
+
+# Change the list of packages to install
+
+class { 'ruby' : packages => [ 'other_package', 'another_package' ] }
+
+# Ensure the packages are not installed
+
+class { 'ruby' : installed => false }
+
+# In addition to the packages installed by the ruby init class, there
+# is an additional define where you can install arbitrary ruby packages
+# and then chain them via Resource Chaining to define the order they are
+# installed
+
+class { 'ruby': }
+ruby::package { 'foo': provider => 'gem', ensure => '0.3.0' }
+ruby::package { 'bar': provider => 'gem', ensure => 'latest' }
+
+Class[ruby]         -> Ruby::Package[foo]
+Ruby::Package[foo]  -> Ruby::Package[bar]
+
+== CAVEATS:
+
+Currently no way to uninstall the packages. That is hard coded as installed.
+To uninstall gem packages, you'll have to modify the define and set ensure to
+'absent' for gem packages and/or 'purged' for apt ruby packages since the apt
+provider supports purging.
+
+== LICENSE:
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

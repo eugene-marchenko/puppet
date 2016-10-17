@@ -1,0 +1,48 @@
+##################################################################
+# /etc/elasticsearch/elasticsearch.yml
+#
+# Base configuration for a write heavy cluster
+#
+
+# Location of data store
+path.data: /mnt/log
+
+# Cluster / Node Basics
+cluster.name: logng
+
+# Node can have abritrary attributes we can use for routing
+node.name: logsearch-01
+node.datacenter: amsterdam
+
+# Force all memory to be locked, forcing the JVM to never swap
+bootstrap.mlockall: true
+
+# Indexing Settings for Writes
+indices.memory.index_buffer_size: 50%
+index.refresh_interval: 30
+index.translog.flush_threshold_ops: 50000
+index.store.compress.stored: true
+
+## Threadpool Settings ##
+
+# Search pool
+threadpool.search.type: fixed
+threadpool.search.size: 20
+threadpool.search.queue_size: 100
+
+# Bulk pool
+threadpool.bulk.type: fixed
+threadpool.bulk.size: 60
+threadpool.bulk.queue_size: 300
+
+# Index pool
+threadpool.index.type: fixed
+threadpool.index.size: 20
+threadpool.index.queue_size: 100
+
+# Minimum nodes alive to constitute an operational cluster
+discovery.zen.minimum_master_nodes: 2
+
+# Unicast Discovery (disable multicast)
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: [ "logsearch-01", "logsearch-02", "logsearch-03" ]

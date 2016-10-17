@@ -1,0 +1,6 @@
+{ 
+  "logwatch_custom_packages" : {
+    "logwatch1" : {},
+    "logwatch2" : {}
+  }
+}

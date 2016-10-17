@@ -1,0 +1,18 @@
+{ "vsftpd_custom_service" : { 
+    "vsftpd" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "vsftpd_custom_packages" : {
+    "vsftpd" : {}
+  },
+  "vsftpd_custom_configs" : {
+    "/etc/vsftpd.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

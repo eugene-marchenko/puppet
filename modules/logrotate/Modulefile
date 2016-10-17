@@ -1,0 +1,10 @@
+name    'logrotate'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/logrotate'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages logrotate packages, services, configs for logrotate'
+description 'Manages logrotate packages, services, configs for logrotate'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

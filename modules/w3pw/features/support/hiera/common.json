@@ -1,0 +1,18 @@
+{ "w3pw_custom_service" : { 
+    "w3pw" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "w3pw_custom_packages" : {
+    "w3pw" : {}
+  },
+  "w3pw_custom_configs" : {
+    "/etc/w3pw/w3pw.conf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

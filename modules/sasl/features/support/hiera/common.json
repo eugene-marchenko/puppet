@@ -1,0 +1,20 @@
+{ "sasl_custom_service" : { 
+    "sasl" : {
+      "ensure" : "running",
+      "enable" : false
+    }
+  },
+  "sasl_custom_packages" : {
+    "sasl" : { 
+      "ensure" : "2.9.1-4" 
+    }
+  },
+  "sasl_custom_configs" : {
+    "/opt/sasl/main.cf" : {
+      "ensure" : "present",
+      "owner" : "root",
+      "group" : "root",
+      "mode" : "0644"
+    }
+  }
+}

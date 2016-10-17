@@ -1,0 +1,20 @@
+# Whether to start ActiveMQ (as a daemon or not)
+<% if @activemq_enabled =~ /false|no/ -%>
+NO_START=1
+<% else -%>
+NO_START=0
+<% end -%>
+
+# Use Debian create user to run ActiveMQ process
+<% if @activemq_user -%>
+ACTIVEMQ_USER="<%= @activemq_user %>"
+<% else -%>
+ACTIVEMQ_USER="activemq"
+<% end -%>
+
+# Time to wait for the server to die, in seconds
+<% if @activemq_dietime -%>
+DIETIME=<%= @activemq_dietime %>
+<% else -%>
+DIETIME=2
+<% end -%>

@@ -1,0 +1,20 @@
+<% 
+  users = []
+
+  if @vsftpd_chroot_users
+    if @vsftpd_chroot_users.kind_of?(Array)
+      users = @vsftpd_chroot_users
+    else
+      if @vsftpd_chroot_users =~ /, /
+        users = @vsftpd_chroot_users.split(', ')
+      elsif @vsftpd_chroot_users =~ /,/
+        users = @vsftpd_chroot_users.split(',')
+      else
+        users = @vsftpd_chroot_users.split
+      end
+    end
+  end
+-%>
+<% users.each do |user| -%>
+<%= user %>
+<% end -%>

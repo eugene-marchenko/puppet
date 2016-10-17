@@ -1,0 +1,9 @@
+name    'skeleton_pkg_only'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/skeleton_pkg_only'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages skeleton_pkg_only packages, services, configs for skeleton_pkg_only'
+description 'Manages skeleton_pkg_only packages, services, configs for skeleton_pkg_only'
+
+## Add dependencies, if any:

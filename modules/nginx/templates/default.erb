@@ -1,0 +1,5 @@
+server {
+  listen 80;
+  server_name thedailybeast.com;
+  rewrite ^/(.*) http://www.thedailybeast.com/$1 permanent;
+}

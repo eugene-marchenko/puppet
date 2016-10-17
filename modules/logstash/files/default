@@ -1,0 +1,18 @@
+# Defaults for /etc/init.d/logstash
+
+#JAVA_HOME=/usr
+
+#serviceNameLo="logstash"                             # service name with the first letter in lowercase
+serviceName="logstash"                               # service name
+serviceUser="root"                               # OS user name for the service
+serviceGroup="root"                              # OS group name for the service
+#confFile='/etc/logstash/conf.d/*'
+#applDir="/usr/share/logstash"                        # home directory of the service application
+#serviceUserHome="/usr/share/logstash"                # home directory of the service user
+#serviceLogFile="/var/log/logstash/logstash.log"      # log file for StdOut/StdErr
+#maxShutdownTime=15                                   # maximum number of seconds to wait for the daemon to terminate normally
+#pidFile="/var/run/logstash.pid"                      # name of PID file (PID = process ID number)
+#jarFile="/usr/share/logstash/logstash.jar"           # path to the jar file
+#javaCommand="java"                                   # name of the Java launcher without the path
+javaOpts="-Xmx80m -Xms80m"                           # additional options for the JVM
+#logstashArgs="-vv"                                   # additional options for logstash

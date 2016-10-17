@@ -1,0 +1,167 @@
+#!/bin/bash
+#
+# rc file for cq5 WCM/CRX 
+#
+# On most distributions, this file should be called:
+# /etc/rc.d/init.d/cq5-<%= name %>
+#
+### BEGIN INIT INFO
+# Provides:            cq5-<%= name %>
+# Required-Start:      $local_fs
+# Required-Stop:       $local_fs
+# Default-Start:       2 3 4 5
+# Default-Stop:                0 1 6
+# Short-Description:   cq5 daemon
+# Description:         daemon to run CQ5 WCM/CRX <%= name %> node
+### END INIT INFO
+
+# For Redhat-ish systems
+#
+# chkconfig: 345 28 72
+# processname: <%= path %>/crx-quickstart/server/serverctl
+# description: daemon to run CQ5 WCM/CRX <%= name %> node
+
+. /lib/lsb/init-functions
+<%
+  options = []
+
+  # First set required or specified defaults
+
+  options << "--port #{@port}"
+  options << "--permgen #{@permgen}"
+  options << "--heap-max #{@heap_max}"
+  options << "--max-files #{@max_files}"
+
+  if @verbose_gc
+    options << "--verbose-gc"
+  end
+
+  if @heap_min
+    options << "--heap-min #{@heap_min}"
+  end
+
+  if @interface
+    options << "--interface #{@interface}"
+  end
+
+  if @javahome
+    options << "--javahome #{@javahome}"
+  end
+-%>
+
+DESC="CQ5 Cluster <%= name %>"
+ROOTDIR=<%= path %>
+SERVERCTL=$ROOTDIR/crx-quickstart/server/serverctl
+OPTIONS="<%= options.join(" ")%>"
+JAVAOPTS="<%= @javaopts_real %>"
+<% if @mount -%>
+VOLUME=<%= @mount %>
+<% else -%>
+VOLUME=
+<% end -%>
+PIDFILE=$ROOTDIR/crx-quickstart/server/logs/cq.pid
+
+start() {
+    log_begin_msg "Starting $DESC"
+    $SERVERCTL $OPTIONS --javaopts "${JAVAOPTS}" start
+    log_end_msg $?
+}
+
+stop() {
+    test -f $PIDFILE || {
+        log_daemon_msg "$DESC not running, pid file doesn't exist: $PIDFILE"
+        exit 1
+    }
+
+    cq5pid=`cat $PIDFILE`
+
+    log_daemon_msg "CQ5 Pid is ${cq5pid}"
+
+    log_begin_msg "Stopping $DESC"
+
+    $SERVERCTL stop 
+    retval=$?
+    sleep 10
+    check_process $cq5pid
+    kill_pids $cq5pid
+    log_end_msg $?
+}
+
+check_process() {
+    counter=0
+    while ps -p $1 >/dev/null 2>&1 && [ $counter -lt "50" ]
+        do
+        log_daemon_msg "$DESC process ${1} is still running..."
+        sleep 6
+        let counter++
+    done
+}
+
+kill_pids() {
+    for i in $* ;
+        do
+        if ps -p $i >/dev/null 2>&1;
+            then
+            log_daemon_msg "Dirty killing pid $i..."
+            kill -9 $i
+        fi
+    done
+    sleep 10
+}
+
+mount_check() {
+    COUNTER=10
+    mount_vol=$1
+    until [  $COUNTER == 1 ]; do
+        let COUNTER-=1
+        /bin/df | grep -q $VOLUME
+        retval=$?
+        if [ $retval -eq 0 ] ; then
+            break
+        else
+            log_warning_msg "Waiting for $1 to mount $COUNTER more time(s) before exiting"
+            sleep 5
+        fi
+    done
+
+    if [[ $COUNTER -eq 1 && $retval > 0 ]]; then
+        log_begin_msg "$1 not mounted, giving up."
+	log_end_msg 1
+	exit 1
+    fi
+}
+
+# Do a mount check before doing anything if $VOLUME exists
+test -n "$VOLUME" && mount_check $VOLUME
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    log_begin_msg "Restarting $DESC..."
+    stop
+    sleep 10
+    start
+    log_end_msg $?
+    ;;
+  status)
+    $SERVERCTL status | grep -q running
+    retval=$?
+    if [ $retval -eq 0 ] ; then
+        log_daemon_msg "$DESC is running"
+        exit 0
+    else
+        log_daemon_msg "$DESC is not running"
+        exit 1
+    fi
+    ;;
+  *)
+    log_success_msg "Usage: /etc/init.d/cq5 {start|stop|restart|status}"
+    exit 1
+esac
+
+exit 0

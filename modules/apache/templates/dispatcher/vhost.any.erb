@@ -1,0 +1,138 @@
+#---------------------BEGIN <%= srvname %> vhost SECTION-----------------
+# The Dispatcher doesn't like /website names with periods in them, so gsub to _
+/<%= srvname.gsub('.', '_').gsub('-', '_') %>
+  {  
+/clientheaders
+  {
+    "referer"
+    "user-agent"
+    "from"
+    "content-type"
+    "content-length"
+    "accept-charset"
+    "accept-encoding"
+    "accept-language"
+    "accept"
+    "host"
+    "if-match"
+    "if-none-match"
+    "if-range"
+    "if-unmodified-since"
+    "max-forwards"
+    "proxy-authorization"
+    "proxy-connection"
+    "range"
+    "cookie"
+    "cq-action"
+    "cq-handle"
+    "handle"
+    "action"
+    "cqstats"
+    "depth"
+    "translate"
+    "expires"
+    "date"
+    "dav"
+    "ms-author-via"
+    "if"
+    "lock-token"
+    "x-expected-entity-length"
+    "destination"
+  }
+/virtualhosts
+  {
+  <% if default_vhost == true -%>
+  <%= "    \"*\"" %>
+  <% else -%>
+  <%= "    \"#{srvname}\"" %>
+  <% end -%>
+  }
+/renders
+<%
+  backends  = []
+  hosts     = []
+
+  if renders.kind_of?(Array)
+    hosts = renders
+  else
+    if renders =~ /\s*,\s*/
+      hosts = renders.split('\s*,\s*')
+    else
+      hosts = renders.split
+    end
+  end
+
+  backends = hosts.map do |host|
+    if host =~ /:/
+      host.split(':')
+    else
+      [ host, '80' ]
+    end
+  end
+-%>
+  {
+<% backends.enum_with_index do |v,i| -%>
+    /rend<%= i %> { /hostname "<%= v[0] %>" /port "<%= v[1] %>" /timeout "30000" }
+<% end -%>
+  }
+/filter  {
+    /0001 { /glob "*" /type "allow" }
+    /0002 { /glob "* /var" /type "deny" }
+    /0003 { /glob "* /libs" /type "deny" }
+    /0004 { /glob "* /etc" /type "deny" }
+    /0005 { /glob "* /apps" /type "deny" }
+    /0006 { /glob "* /tmp" /type "deny" }
+    /0007 { /glob "* /home" /type "deny" }
+    /0008 { /glob "* /etc/designs*" /type "allow" }
+    /0009 { /glob "* /libs/foundation/components/shared*" /type "allow" }
+    /0010 { /glob "* /libs/widgets*" /type "allow" }
+    /0011 { /glob "* /libs/packaging/widgets*" /type "allow" }
+    /0012 { /glob "* /etc/static*" /type "allow" }
+  }
+
+/propagateSyndPost "0"
+
+/cache  {
+  /docroot "<%= docroot %>"
+  /statfileslevel "5"
+  /allowAuthorized "1"
+  /serveStaleOnError "1"
+
+  /rules  {
+    /0000 { /glob "*" /type "allow" }
+    /0001 { /glob "/content/user/account*" /type "deny" }
+    /0002 { /glob "/content/dailybeast/services/newslettersfeeds*" /type "deny" }
+    /0003 { /glob "/newsletters*" /type "deny" }
+    /0004 { /glob "/services*" /type "deny" }
+    /0005 { /glob "/feed*" /type "deny" }
+    /0006 { /glob "/sitemap*" /type "deny" }
+    /0007 { /glob "/content/dailybeast/sitemap*" /type "deny" }
+  }
+
+  /ignoreUrlParams  {
+    $include "ignoreUrlParams.any"
+  }
+
+  /invalidate  {
+    /0000 { /glob "*" /type "deny" }
+    /0001 { /glob "*.html" /type "allow" }
+    /0002 { /glob "*.json" /type "allow" }
+    /0003 { /glob "*.htm" /type "allow" }
+    /0004 { /glob "*.xml" /type "allow" }
+<%- if @env == "qa" -%>
+    /0005 { /glob "*.jpg" /type "allow" }
+<%- end -%>
+  }
+
+} # Terminates /cache section
+
+/statistics  {
+    /categories  {
+      /html { /glob "*.html" }
+      /json { /glob "*.json" }
+      /xml { /glob "*.xml" }
+      /others { /glob "*" }
+    }
+  }
+} # Terminates /website section
+#----------------------END <%= srvname %> vhost SECTION-------------------

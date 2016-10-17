@@ -1,0 +1,2 @@
+sysstat sysstat/enable  boolean true
+sysstat sysstat/remove_files  boolean true

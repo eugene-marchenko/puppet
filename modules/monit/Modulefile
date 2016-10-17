@@ -1,0 +1,10 @@
+name    'monit'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/monit'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages monit packages, services, configs for monitoring various services'
+description 'Manages monit packages, services, configs for monitoring various services'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'

@@ -1,0 +1,9 @@
+name    'skeleton'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/skeleton'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages skeleton packages, services, configs for skeleton'
+description 'Manages skeleton packages, services, configs for skeleton'
+
+## Add dependencies, if any:
