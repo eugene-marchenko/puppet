@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c3cf345-e350-4460-861c-18853a4c0a2a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/shells/templates/shells.erb" afterPath="$PROJECT_DIR$/modules/shells/templates/shells.erb" />
     </list>
     <ignored path="puppet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -397,7 +396,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476359447179</updated>
-      <workItem from="1476359448257" duration="16084000" />
+      <workItem from="1476359448257" duration="16117000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1476359523074</created>
@@ -420,11 +419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476716457891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1476716591398</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1476716591398</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16084000" />
+    <option name="totallyTimeSpent" value="16117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="252" y="52" width="1461" height="1028" extended-state="4" />
