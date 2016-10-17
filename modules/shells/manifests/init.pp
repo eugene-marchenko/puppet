@@ -41,6 +41,8 @@ class shells(
   validate_bool($installed)
   validate_hash($configs)
 
+  notify {"shells allowed: $configs":}
+
   case $installed {
     true: {
 
