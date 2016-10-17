@@ -5,6 +5,7 @@
 #
 # The high level stages are (in order):
 #
+#  * init
 #  * setup
 #  * main
 #  * runtime
@@ -26,12 +27,13 @@
 # Sample Usage:
 #
 #  node default {
-#    include ::stdlib
+#    include stdlib
 #    class { java: stage => 'runtime' }
 #  }
 #
 class stdlib::stages {
 
+  stage { 'init': before => Stage['setup'] }
   stage { 'setup':  before => Stage['main'] }
   stage { 'runtime': require => Stage['main'] }
   -> stage { 'setup_infra': }

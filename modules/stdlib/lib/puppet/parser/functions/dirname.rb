@@ -1,21 +1,16 @@
+# dirname(string) : string
+# dirname(string[]) : string[]
+#
+# Returns all components of the filename given as argument except the last
+# one. The filename must be formed using forward slashes (``/..) regardless of
+# the separator used on the local file system.
 module Puppet::Parser::Functions
-  newfunction(:dirname, :type => :rvalue, :doc => <<-EOS
-    Returns the dirname of a path.
-    EOS
-  ) do |arguments|
-
-    if arguments.size < 1 then
-      raise(Puppet::ParseError, "dirname(): No arguments given")
-    end
-    if arguments.size > 1 then
-      raise(Puppet::ParseError, "dirname(): Too many arguments given (#{arguments.size})")
-    end
-    unless arguments[0].is_a?(String)
-      raise(Puppet::ParseError, 'dirname(): Requires string as argument')
-    end
-
-    return File.dirname(arguments[0])
-  end
+	newfunction(:dirname, :type => :rvalue) do |args|
+		if args[0].is_a?(Array)
+			args.collect do |a| File.dirname(a) end
+		else
+			File.dirname(args[0])
+		end
+	end
 end
 
-# vim: set ts=2 sw=2 et :

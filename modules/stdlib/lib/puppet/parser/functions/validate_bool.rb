@@ -19,15 +19,12 @@ module Puppet::Parser::Functions
 
     ENDHEREDOC
 
-    # The deprecation function was being called twice, as validate_bool calls is_bool. I have removed it from here so it only calls deprecation once within is_bool.
-    # function_deprecation([:puppet_3_type_check, 'This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Bool. There is further documentation for validate_legacy function in the README.'])
-
     unless args.length > 0 then
       raise Puppet::ParseError, ("validate_bool(): wrong number of arguments (#{args.length}; must be > 0)")
     end
 
     args.each do |arg|
-      unless function_is_bool([arg])
+      unless (arg.is_a?(TrueClass) || arg.is_a?(FalseClass))
         raise Puppet::ParseError, ("#{arg.inspect} is not a boolean.  It looks to be a #{arg.class}")
       end
     end

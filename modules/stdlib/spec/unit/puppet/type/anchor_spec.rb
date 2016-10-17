@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'spec_helper'
+require 'puppet'
 
 anchor = Puppet::Type.type(:anchor).new(:name => "ntp::begin")
 
 describe anchor do
   it "should stringify normally" do
-    expect(anchor.to_s).to eq("Anchor[ntp::begin]")
+    anchor.to_s.should == "Anchor[ntp::begin]"
   end
 end
