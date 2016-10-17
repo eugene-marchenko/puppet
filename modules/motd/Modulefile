@@ -1,0 +1,11 @@
+name    'motd'
+version '0.0.1'
+source 'git://github.com/dailybeast/puppet/modules/motd'
+author 'The Newsweek/Daily Beast Company LLC'
+license 'Apache License, Version 2'
+summary 'Manages motd packages, services, configs for motd'
+description 'Manages motd packages, services, configs for motd'
+
+## Add dependencies, if any:
+dependency 'puppetlabs/stdlib', '>= 2.2.1'
+dependency 'ripienaar/concat',  '>= 0.1.0'
