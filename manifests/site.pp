@@ -1,1 +1,1 @@
-notify { 'test message': message => 'test message', }
+notify { 'test message': message => "test ${facts['hostname']} message", }
