@@ -1,6 +1,0 @@
-{ 
-  "sysstat_packages" : [ "foo", "bar" ],
-  "sysstat_package_hash" : {
-    "new_packages" : [ "sysstat-common" ]
-  }
-}

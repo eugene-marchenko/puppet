@@ -1,6 +1,0 @@
-{ 
-  "logstash_custom_packages" : {
-    "logstash1" : {},
-    "logstash2" : {}
-  }
-}

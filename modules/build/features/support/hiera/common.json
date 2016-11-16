@@ -1,6 +1,0 @@
-{ 
-  "build_packages" : [ "foo", "bar" ],
-  "build_package_hash" : {
-    "new_packages" : [ "build-common" ]
-  }
-}
