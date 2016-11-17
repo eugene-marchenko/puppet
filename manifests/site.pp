@@ -1,10 +1,10 @@
 node default {
-  $roles = split($::roles, '\s*,\s*')
+  $roless = split($facts['roles'], '\s*,\s*')
   notify { 'test message': message => "Custom fact is ${facts['roles']} message", }
-  if 'developer' in $roles {
+  if 'developer' in $roless {
     notify { 'inside if statement ' : message => "Developer in roles" }
   }
-  if 'test' in $roles {
+  if 'test' in $roless {
     notify { 'inside statement 2' : message => "Test in roles" }
   }
 }
