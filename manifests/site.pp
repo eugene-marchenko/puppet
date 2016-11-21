@@ -7,4 +7,8 @@ node default {
   if 'run' in $facts['roles'] {
     notify { 'inside statement 2' : message => "Test in roles", }
   }
+
+  each($facts['system_uptime']) |$type, $value| {
+    notice("system has been up ${value} ${type}")
+  }
 }
