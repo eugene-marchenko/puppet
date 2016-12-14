@@ -1,5 +1,5 @@
 node default {
 
-  include site::roles::base
+  include base
 
 }
