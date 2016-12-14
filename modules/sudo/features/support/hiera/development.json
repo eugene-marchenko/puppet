@@ -1,3 +1,0 @@
-{ "sudoers" : [ "sysadmins", "developers" ],
-  "sudo_packagename" : "sudo-2.3"
-}

@@ -1,8 +1,0 @@
-<% classes.each do |klass| -%>
-<% if klass =~ /::/ -%>
-<% if not klass =~ /roles/ -%>
-<% next -%>
-<% end -%>
-<% end -%>
-The class <%= klass %> is defined
-<% end -%>

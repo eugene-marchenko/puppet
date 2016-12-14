@@ -1,6 +1,0 @@
-type=Single
-ptype=RegExp
-pattern=(.*)(<%= pattern %>)(.*)
-desc=<%= desc %>
-action=assign %d <%= desc %>;\
-    shellcmd /usr/local/bin/mailsend.sh "%d" "$1 $2 $3"
